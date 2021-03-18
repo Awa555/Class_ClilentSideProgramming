@@ -4,6 +4,12 @@ html, body {
 
 .wrapper {
     min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 
@@ -35,11 +41,18 @@ html, body {
 /* Banner */
 .jumbotron {
     padding:6.5rem 1rem;
-    margin-bottom:2rem;
-    background-image: url(../image/html-4.jpg);
+    margin-bottom:2rem;   
     background-repeat: no-repeat;
     background-color: #ffe26d;
     border-radius:.3rem;
+}
+
+.jumbotron-img-html {
+    background-image: url(../image/html-4.jpg);
+}
+
+.jumbotron-img-css {
+    background-image: url(../image/css-1.jpg);
 }
 
 .jumbotron-h1box {
@@ -65,16 +78,23 @@ html, body {
     padding-left: 4rem;
 }
 
-.side-img {
+.side-img-html {
     background-image: url(../image/html-5.png);
     width: 200px;
     height: 252px;
     align-items: center;
 }
 
+.side-img-css {
+    background-image: url(../image/css-2.jpg);
+    width: 200px;
+    height: 236px;
+    align-items: center;
+}
+
 .content-main {
     flex: 70%;
-    padding: 2rem;
+    padding: 2rem 4rem 2rem 2rem;
 }
 
 h2 {
@@ -84,6 +104,9 @@ h2 {
 
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    text-justify:inter-ideograph;
+    overflow:hidden
 }
 
 
@@ -91,7 +114,8 @@ p {
 #footer {
     padding:1rem 4rem 0rem 4rem;
     background: rgb(184, 184, 184);
-    bottom: 1;   
+    bottom: 0; 
+    position: relative;  
 }
 
 .table {
