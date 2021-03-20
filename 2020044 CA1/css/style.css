@@ -1,0 +1,166 @@
+
+
+html, body {
+    margin: 0;
+}
+
+.container {    
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Top Navigation Bar */
+.navbar {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    background-color: #353a3f;
+    /* position: fixed;
+    right: 0;
+    left: 0; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.navbar-item {   
+    padding: 0.2rem 1.5rem 0.2rem 1.5rem;  
+}
+
+.navbar-item-logo { 
+    flex-grow: 1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+.navbar-item-font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.navbar-link {
+    color: #a5a6a6;
+}
+
+.navbar-link:hover {
+    color: #c6c7c7;
+    text-decoration:none;
+}
+
+.navbar-link:active {
+    color: #fff;
+    text-decoration:none;   
+}
+
+.navbar-link-show {
+    color:#fff
+}
+
+
+
+
+/* Banner */
+.banner {
+    padding:6.5rem 1rem; 
+    background-color: #ffe26d;
+    width: 100%;
+    /* margin-top: 4rem;
+    display: flex;
+    position: fixed;
+    right: 0;
+    left: 0; */
+}
+
+.banner-img-html {
+    background-image: url(../image/html-1.jpg);
+}
+
+.banner-img-css {
+    background-image: url(../image/css-1.jpg);
+}
+
+.banner-h1box {
+    width: 60%;
+    float: right;
+}
+
+.banner-h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+
+/* Column container */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.content-side {
+    /* flex: 30%; */
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+
+.side-img-html {
+    background-image: url(../image/html-1.png);
+    width: 200px;
+    height: 252px;
+    align-items: center;
+}
+
+.side-img-css {
+    background-image: url(../image/css-2.jpg);
+    width: 200px;
+    height: 236px;
+    align-items: center;
+}
+
+.content-main {
+    /* flex: 70%; */
+    flex-grow: 1;
+    padding: 2rem 4rem 2rem 2rem;
+}
+
+h2 {
+    line-height: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    text-justify:inter-ideograph;
+    overflow:hidden
+}
+
+
+/* Footer */
+#footer {
+    padding:1rem 4rem 0rem 4rem;
+    background: rgb(184, 184, 184);
+    bottom: 0; 
+    position: relative;  
+}
+
+.table {
+    display: table;   
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;   
+}
+
+.table-font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    text-align: center;
+}

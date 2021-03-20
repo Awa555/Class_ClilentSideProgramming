@@ -15,23 +15,24 @@
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body onload="ShowTime()">
     <div class="wrapper">
+
         <!-- Top Navigation Bar -->
-        <!-- The following 17 lines of code has been sourced from https://www.bootstrapcdn.com/. Then I changed a bit code. -->
+        <!-- The following 14 lines of code has been sourced from https://www.bootstrapcdn.com/. Then I changed a bit code. -->
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand navbar-brand-fontsize">Awa CA1</a>
+            <div class="navbar-brand navbar-brand-fontsize">Awa CA1</div>
             <ul class="navbar-nav navbar-font">
-                <li class="nav-item">
+                <li class="nav-item navbar-li">
                     <a class="nav-link" href="index.html" title="Home">Home</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item navbar-li active">
                     <a class="nav-link" href="#" title="Html">HTML</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item navbar-li">
                     <a class="nav-link" href="css.html" title="CSS">CSS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item navbar-li">
                     <a class="nav-link" href="js.html" title="JavaScript">JavaScript</a>
                 </li>
             </ul>
@@ -40,8 +41,8 @@
         <!-- Banner -->
         <!-- The image has sourced from http://psce.pw/3dva82 -->
         <div class="jumbotron jumbotron-img-html" title="This is a HTML image">
-            <div class="jumbotron-h1box">
-                <h1 class="jumbotron-h1">What is HTML?</h1>
+            <div class="jumbotron-h2box">
+                <h2 class="jumbotron-h2 jumbotron-h2shadow">What is HTML?</h2>
             </div>
         </div>
 
@@ -53,26 +54,26 @@
             </div>
 
             <div class="content-main">
-                <h2>About HTML</h2>
-                <p>To communicate with a web page, you have to learn a specific language: HyperText Markup Language, or
-                    HTML.
+                <h2 class="h2shadow ">About HTML</h2>
+                <p>HTML - Hypertext Markup Language.</p>
+                <p>To communicate with a web page, you have to learn a specific language: HyperText Markup Language, or HTML.
                 </p>
                 <p>HTML is a standard markup language for creating web pages, or the core of a web page.
                 </p>
-                <p>HTML written web page containing many tags, elements, attributes... We can think of these tags,
-                    elements,
-                    attributes, etc... as building blocks of different shapes and functions.
+                <p>HTML written web page containing many tags, elements, attributes... We can think of these tags, elements, attributes, etc... as building blocks of different shapes and functions.
                 </p>
-                <p>In HTML, there are many kinds of building blocks available for human use, and of course, the various
-                    building blocks have their own usage rules. Each person can piece together what they want as if they
-                    were building a secret base on a map. When the piece finished, it is equivalent to a completed HTML
-                    document, or a web page.
+                <p>In HTML, there are many kinds of building blocks available for human use, and of course, the various building blocks have their own usage rules. Each person can piece together what they want as if they were building a secret base on a map. When the piece finished, it is equivalent to a completed HTML document, or a web page.
                 </p>
-                <p>Web pages are like building blocks. Everyone can create their pages as long as they are familiar with
-                    what they are used to and the rules.
+                <p>Web pages are like building blocks. Everyone can create their pages as long as they are familiar with what they are used to and the rules.
                 </p>
+                <h5>HTML Syntax & Rules</h5>
+                <p class="p-rule">&lt;div id="banner"&gt; There is footer &lt;/div&gt;</p>
+                <p class="p-rule">&lt;p class="navbar"&gt; Home &lt;/p&gt;</p>
             </div>
         </div>
+
+        <!-- Go back top -->
+        <p id="back-to-top"><a href="#top"><span></span></a></p>
 
         <!-- footer -->
         <div id="footer">
@@ -92,7 +93,16 @@
                     </div>
                 </div>
             </div>
-            <p class="table-font">Copyright © 2021 Awa. All rights reserved.</p>
+
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell table-font">
+                        Copyright © 2021 Awa. All rights reserved.
+                    </div>
+                    <!-- The following 1 lines of code has been sourced from https://www.w3schools.com/js/ -->
+                    <div class="table-cell table-font" id="showbox"></div>
+                </div>
+            </div>
         </div>
 </body>
 

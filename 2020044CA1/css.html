@@ -15,74 +15,92 @@
     <script src="js/script.js"></script>
 </head>
 
-<body>
+<body onload="ShowTime()">
     <div class="wrapper">
- 
-            <!-- Top Navigation Bar -->
-            <!-- The following 17 lines of code has been sourced from https://www.bootstrapcdn.com/. Then I changed a bit code. -->
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-                <a class="navbar-brand navbar-brand-fontsize">Awa CA1</a>
-                <ul class="navbar-nav navbar-font">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html" title="Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="html.html" title="Html">HTML</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#" title="CSS">CSS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="js.html" title="JavaScript">JavaScript</a>
-                    </li>
-                </ul>
-            </nav>
 
-            <!-- Banner -->
-            <!-- The image has sourced from https://www.tutorialrepublic.com/css-tutorial/ -->
-            <div class="jumbotron jumbotron-img-css" title="This is a CSS image">
-                <div class="jumbotron-h1box">
-                    <h1 class="jumbotron-h1">What is CSS?</h1>
-                </div>
+        <!-- Top Navigation Bar -->
+        <!-- The following 14 lines of code has been sourced from https://www.bootstrapcdn.com/. Then I changed a bit code. -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="navbar-brand navbar-brand-fontsize">Awa CA1</div>
+            <ul class="navbar-nav navbar-font">
+                <li class="nav-item navbar-li">
+                    <a class="nav-link" href="index.html" title="Home">Home</a>
+                </li>
+                <li class="nav-item navbar-li">
+                    <a class="nav-link" href="html.html" title="Html">HTML</a>
+                </li>
+                <li class="nav-item navbar-li active">
+                    <a class="nav-link" href="#" title="CSS">CSS</a>
+                </li>
+                <li class="nav-item navbar-li">
+                    <a class="nav-link" href="js.html" title="JavaScript">JavaScript</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Banner -->
+        <!-- The image has sourced from https://www.tutorialrepublic.com/css-tutorial/ -->
+        <div class="jumbotron jumbotron-img-css" title="This is a CSS image">
+            <div class="jumbotron-h2box">
+                <h2 class="jumbotron-h2 jumbotron-h2shadow">What is CSS?</h2>
+            </div>
+        </div>
+
+        <!-- Container -->
+        <!-- The image has sourced from https://www.computerhope.com/jargon/c/css.htm -->
+        <div class="content">
+            <div class="content-side">
+                <div class="side-img-css" title="This is a CSS image"></div>
             </div>
 
-            <!-- Container -->
-            <!-- The image has sourced from https://www.computerhope.com/jargon/c/css.htm -->
-            <div class="content">
-                <div class="content-side">
-                    <div class="side-img-css" title="This is a CSS image"></div>
-                </div>
-
-                <div class="content-main">
-                    <h2>About CSS</h2>
-                    <p>To communicate with a web page, you have to learn a specific language: HyperText Markup Language,
-                        or
-                        HTML.
-                    </p>
-                </div>
+            <div class="content-main">
+                <h2 class="h2shadow ">About CSS</h2>
+                <p>CSS – Cascading Style Sheets.</p>
+                <p>CSS is a markup language whose content serves as input to the browser, which resolves its text content as HTML additional style information to modify the tag.</p>
+                <p>A language that describes the structure of a document or the details of data processing in a fixed form, generally in plain text, and whose content serves as input to other programs.</p>
+                <h5>What is the meaning of layers?</h4>
+                <p>We know that the page structure of HTML is tree-like and that the hierarchical nesting of different tags eventually combines to form the page so that from another perspective, the structure of the page is one layer at a time.</p>
+                <h5>CSS Syntax & Rules</h5>
+                <p class="p-rule">#footer { font-family: Arial; }</p>
+                <p class="p-rule">h1 { color: rgb(255, 255, 255) }</p>
+                <h5>Why is CSS important?</h5>
+                <p>CSS affects the entire visual appearance of the site. Well-written stylesheets can be quickly updated and allow web sites to visually change priorities on-screen to display value and focus to visitors without any changes to the underlying HTML tags.</p>
             </div>
+        </div>
 
-            <!-- footer -->
-            <div id="footer">
-                <div class="table">
-                    <div class="table-row">
-                        <div class="table-cell table-font">
-                            Client-side Programming
-                        </div>
-                        <div class="table-cell table-font">
-                            Lecturer: John Snel
-                        </div>
-                        <div class="table-cell table-font">
-                            Student: Chia Hua Lin
-                        </div>
-                        <div class="table-cell table-font">
-                            ID: 2020044
-                        </div>
+        <!-- Go back top -->
+        <p id="back-to-top"><a href="#top"><span></span></a></p>
+
+        <!-- footer -->
+        <div id="footer">
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell table-font">
+                        Client-side Programming
+                    </div>
+                    <div class="table-cell table-font">
+                        Lecturer: John Snel
+                    </div>
+                    <div class="table-cell table-font">
+                        Student: Chia Hua Lin
+                    </div>
+                    <div class="table-cell table-font">
+                        ID: 2020044
                     </div>
                 </div>
-                <p class="table-font">Copyright © 2021 Awa. All rights reserved.</p>
-        
-    </div>
+            </div>
+            
+            <div class="table">
+                <div class="table-row">
+                    <div class="table-cell table-font">
+                        Copyright © 2021 Awa. All rights reserved.
+                    </div>
+                    <!-- The following 1 lines of code has been sourced from https://www.w3schools.com/js/ -->
+                    <div class="table-cell table-font" id="showbox"></div>
+                </div>
+            </div>
+
+        </div>
 </body>
 
 </html>
