@@ -45,6 +45,7 @@ non-vegetarian meals–this only needs to be calculated on the starters and main
 
 
 
-Page 2
+Page 2:
+
 For this page, you are required to research and develop interactive components on this page to showcase your knowledge of JavaScript and demonstrate your ability to integrate a ny third party library and/or frameworks. There is no restriction as to how many Javascripts features you can use here, except that this page should include something that is related to page 1, for example,
 related to food, restaurants, or the country from which you have chosen the cuisine. The purpose of this page is for you to showcase your ability with Javascript and a framework.
