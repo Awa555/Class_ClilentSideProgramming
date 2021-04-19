@@ -15,8 +15,11 @@
     <div>
         <label for="Staff Password" id="lblStaff">Staff Password</label>
         <input type="text" id="StaffPW" placeholder="Staff Password">
-        <label id="inValid" style="visibility:hidden">Invalid Password</label>
+        <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
+        <label id="Valid" style="color: red; visibility:hidden">Valid Staff password</label>
+
         <button onclick="validate()" type="button">Submit</button>
+        
         <ul>
             <li>a. The password must have at least one lowercase letter.</li>
             <li>b. The password must have at least one uppercase letter.</li>
