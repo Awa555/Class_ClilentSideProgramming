@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,25 +14,30 @@
 
 <body>
     <div class="titleBar">
-        <h1>Restaurant Order System</h1>
+        <h2>Restaurant Order System</h2>
     </div>
-    <div class="staffBar">
-        <label for="Staff Password" id="lblStaff">Staff Password</label>
-        <input type="text" id="StaffPW" placeholder="Staff Password">
-        <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
-        <label id="Valid" style="color: red; visibility:hidden">Valid Staff password</label>
+    <div class="staffBox">
+        <div class="staffBoxImg">
+            <div class="staffBoxFontBox">
+                <label for="Staff Password" id="lblStaff"><h3>Staff Password</h3></label>
+                <input type="text" id="StaffPW" placeholder="Staff Password">
+                <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
+                <label id="Valid" style="color: red; visibility:hidden">Valid Staff password</label>
 
-        <button onclick="validate()" type="button">Submit</button>
-        
-        <ul>
-            <li>a. The password must have at least one lowercase letter.</li>
-            <li>b. The password must have at least one uppercase letter.</li>
-            <li>c. It must contain one digit and one special character.</li>
-            <li>d. And it must be at least eight characters long.</li>
-        </ul>
+                <button onclick="validate()" type="button">sign In</button>
+
+                <ul class="staffBoxFontBoxUl">
+                    <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
+                    <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
+                    <li class="staffBoxFontBoxLi">c. It must contain one digit and one special character.</li>
+                    <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div></div>
-    
+
 </body>
+
 </html>

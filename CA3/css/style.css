@@ -9,17 +9,40 @@ body {
 
 /* Title Bar */
 .titleBar {
-    background-color: rgb(65, 65, 65);
-    padding: 0.1em 1.5em;
+    background-color: rgb(145, 12, 12);
+    padding: 0.1em 1.8em;
 }
 
-h1 {
+h2 {
     color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
-/* StaffPW Bar */
-.staffBar {
-    border: 1px solid rgb(65, 65, 65);
-    padding: 1.5em;
+
+/* StaffPassword Bar */
+.staffBox {
+    background-image: url(../image/img02.jpg);
+    background-repeat: repeat-x;
+}
+
+.staffBoxImg {
+    padding: 2em 3em 5em 1.8em;
+    background-image: url(../image/img01.jpg);
+    background-repeat: no-repeat;
+}
+
+.staffBoxFontBox {
+    width: 60%;
+    margin: auto;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.staffBoxFontBoxUl {
+    list-style: none;
+}
+
+.staffBoxFontBoxLi {
+    padding-bottom: 0.5em;
 }
