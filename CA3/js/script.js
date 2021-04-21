@@ -5,7 +5,7 @@ function validate() {
 
     var regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-    if(regex.test(staffPassword)) {
+    if (regex.test(staffPassword)) {
 
         alert("valid Staff Password");
 
@@ -23,13 +23,72 @@ function validate() {
     }
 }
 
+
 // User
+fetch("../API/users.json")
+    .then((response) => {
+        // handle response data
+    })
 
+    .catch((err) => {
+        // handle errors
+    });
+    
+const displayUserName = ({ title, last, first }) => {
+    document.querySelector(
+        ".user-name"
+    ).textContent = `${title} ${first} ${last}`;
+};
 
-$.ajax({
-    url: 'https://randomuser.me/api/',
-    dataType: 'json',
-    success: function(data) {
-      console.log(data);
-    }
-  });
+const displayUserPhoto = ({ large }) => {
+    document
+        .querySelector(".user-photo")
+        .getElementsByTagName("img")[0].src = large;
+};
+
+const displayUserPhone = ({ phone, cell }) => {
+    document.querySelector(
+        ".user-phone"
+    ).textContent = `${phone} / ${cell}`;
+};
+
+const displayUserAddress = ({ street, city, state }) => {
+    const { name, number } = street;
+    document.querySelector(
+        ".user-address"
+    ).textContent = `${number} ${name}, ${city}, ${state}`;
+};
+
+const displayUserInfo = (data) => {
+    if (!data) return;
+
+    console.log(data);
+    //using object destructuring
+    const { results } = data;
+    const [profile] = results;
+
+    const { name } = profile;
+    displayUserName(name);
+
+    const { picture } = profile;
+    displayUserPhoto(picture);
+
+    displayUserPhone(profile);
+
+    const { location } = profile;
+    displayUserAddress(location);
+
+};
+
+const getUserInfo = () => {
+    const api = "https://randomuser.me/api/";
+
+    // make API call here
+    fetch(api)
+        .then((response) => response.json())
+        .then((data) => {
+            displayUserInfo(data);
+        })
+        .catch((error) => alert("error getting API resources"));
+};
+getUserInfo();
