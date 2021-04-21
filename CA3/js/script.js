@@ -1,3 +1,4 @@
+// Staff Password
 function validate() {
     // access the value inside the textbox
     var staffPassword = document.getElementById('StaffPW').value;
@@ -21,3 +22,14 @@ function validate() {
         document.getElementById('Valid').style.visibility = "hidden";
     }
 }
+
+// User
+
+
+$.ajax({
+    url: 'https://randomuser.me/api/',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+    }
+  });

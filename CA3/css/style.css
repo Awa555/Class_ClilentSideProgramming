@@ -1,0 +1,25 @@
+body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+
+/* Title Bar */
+.titleBar {
+    background-color: rgb(65, 65, 65);
+    padding: 0.1em 1.5em;
+}
+
+h1 {
+    color: white;
+}
+
+
+/* StaffPW Bar */
+.staffBar {
+    border: 1px solid rgb(65, 65, 65);
+    padding: 1.5em;
+}
