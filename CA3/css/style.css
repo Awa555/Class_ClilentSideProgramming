@@ -27,13 +27,13 @@ h2 {
 }
 
 .staffBoxImg {
-    padding: 2em 3em 5em 1.8em;
+    padding: 0.2em 3em 8em 1.8em;
     background-image: url(../image/img01.jpg);
     background-repeat: no-repeat;
 }
 
 .staffBoxFontBox {
-    width: 60%;
+    width: 55%;
     margin: auto;
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -45,4 +45,39 @@ h2 {
 
 .staffBoxFontBoxLi {
     padding-bottom: 0.5em;
+}
+
+.stPW {
+    font-size: 20px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 1px #000000;
+}
+
+input {
+    padding: 0.5em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-width: 2px solid;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    padding: 6px 15px;
+    background: #ffc400;
+    cursor: pointer;
+    border-radius: 0.6em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 1px white;
+    color: black;
+    font-size: 14px;
+}
+
+input:hover[type="submit"] {
+    padding: 6px 15px;
+    background: #ffb700;
+    cursor: pointer;
+    border-radius: 0.6em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 1px white;
+    color: black;
+    font-size: 14px;
 }

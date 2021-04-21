@@ -19,12 +19,11 @@
     <div class="staffBox">
         <div class="staffBoxImg">
             <div class="staffBoxFontBox">
-                <label for="Staff Password" id="lblStaff"><h3>Staff Password</h3></label>
-                <input type="text" id="StaffPW" placeholder="Staff Password">
+                <label for="Staff Password" id="lblStaff"><p class="stPW">Staff Password</p></label>
+                <input type="text" id="StaffPW" placeholder="Input Staff Password">
+                <input onclick="validate()" type="submit" value="Sign In">
                 <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
-                <label id="Valid" style="color: red; visibility:hidden">Valid Staff password</label>
-
-                <button onclick="validate()" type="button">sign In</button>
+                <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
 
                 <ul class="staffBoxFontBoxUl">
                     <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
