@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Challenge information -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">Client-side programming</h1>
+                <p class="lead"><b>Group A</b>Lab activity</p>
+                <p class="lead">Time: 2 hours and 15 minutes</p>
+                <p class="lead">Lecturer: John Snel</p>
+                <p class="lead">Weight: 25%</p>
+
+
+            </div>
+        </div>
+                
+        <!-- Challenge 1 -->
+        <h2>Instructions</h2>
+        <p>There are four challenges in this activity. You are required to identify the problems that are present <b>only in the <i>main.js</i> file</b> and fix these problems. Each challenge has <b style="color: teal">5 edits</b> made on it to break the code but you can make as many edits as you feel fit in order to get it functioning as shown in video below.</p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1ArIy3MmqlI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <div class="col-xs-12" style="height:40px;"></div>
+
+        <p> Edit and submit the <i>main.js</i> file to Moodle–the <i>index.html</i> should <b>not</b> be edited nor does it need to be submitted. Each of the challenges carry equal marks. Aim to complete all four challenges. </p>
+
+        <div class="col-xs-12" style="height:80px;"></div>
+
+
+        <!-- Challenge 1 -->
+        <h2>Challenge 1: Enter and display your name</h2>
+        <p>Below you have an input box that will take your name and display it in the green box.  </p>
+
+        <b>Enter your name: <input type="text" id="name" class="form-control" placeholder="Student Name"></b><br>
+
+        <p>Click the button to display the value of the value attribute of the text field.</p>
+
+        <button id="btnCh1" class="btn btn-info">Try it</button><br><br>
+
+        <div class="alert alert-success" id="output1">Message will appear here</div>
+
+        <div class="col-xs-12" style="height:50px;"></div>
+        
+
+        <!-- Challenge 2 -->
+        <h2>Challenge 2: Calculate Age from Date of Birth </h2>
+        <p>Enter your age below and click the button to see your age being calculated.  </p>
+
+        <!-- Choose a date and enter in input field -->
+        <b> Enter Date of Birth: <input type=date id=DOB class="form-control"> </b>
+        <span id="message"> </span> <br>
+
+        <!-- Choose a date and enter in input field -->
+        <button id="btnCh2" class="btn btn-info"> Calculate age </button><br><br>
+
+        <div class="alert alert-success" id="output2">Message will appear here</div>
+
+        <div class="col-xs-12" style="height:50px;"></div>
+
+        <!-- Challenge 3 -->
+        <h2>Challenge 3: Check Number</h2>
+        <p>Enter a number to see if it is positive, negative or zero.</p>
+
+        <b>Enter a number: </b><input type="text" id="number"  placeholder="Number" class="form-control"><br>
+
+        <button id="btnCh3" class="btn btn-info"> Check Number </button><br><br>
+
+        <div class="alert alert-success" id="output3">Message will appear here</div>
+
+        <div class="col-xs-12" style="height:50px;"></div>
+
+        <!-- Challenge 4 -->
+        <h2>Challenge 4: Change background color on key event</h2>
+        <div id="output4"></div>
+        <div style="padding:200px"></div>
+        
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
