@@ -10,6 +10,16 @@
     <script src="js/script.js"></script>
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#hide")
+                    .slideToggle(2000);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,7 +29,9 @@
     <div class="staffBox">
         <div class="staffBoxImg">
             <div class="staffBoxFontBox">
-                <label for="Staff Password" id="lblStaff"><p class="stPW">Staff Password</p></label>
+                <label for="Staff Password" id="lblStaff">
+                    <p class="stPW">Staff Password</p>
+                </label>
                 <input type="text" id="StaffPW" placeholder="Input Staff Password">
                 <input onclick="validate()" type="submit" value="Sign In">
                 <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
@@ -35,12 +47,13 @@
         </div>
     </div>
 
-    
-    <div class="profile-out">
+    <button>User Information</button>
+
+    <div id="hide" class="profile-out">
         <div class="profile-in">
-            <div class="profile">    
+            <div class="profile">
                 <div class="user-photo">
-                    <a href="https://placeholder.com"></a><img src="https://via.placeholder.com/125" /></a>
+
                 </div>
                 <h4 class="user-name">User Name</h4>
                 <p class="user-phone">User Phone</p>
