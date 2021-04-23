@@ -13,10 +13,10 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("button").click(function () {
-                $("#hide")
-                    .slideToggle(2000);
+        $(document).ready( function () {
+            $("#btHide").click( function(){
+                $("#hide").slideToggle();
+                $("#btHide").toggleClass("active");
             });
         });
     </script>
@@ -30,26 +30,26 @@
         <div class="staffBoxImg">
             <div class="staffBoxFontBox">
                 <label for="Staff Password" id="lblStaff">
-                    <p class="stPW">Staff Password</p>
+                    <p class="stPW">Staff Password Validator</p>
                 </label>
                 <input type="text" id="StaffPW" placeholder="Input Staff Password">
-                <input onclick="validate()" type="submit" value="Sign In">
+                <input onclick="validate()" type="submit" value="Check Password">
                 <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
                 <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
 
                 <ul class="staffBoxFontBoxUl">
                     <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
                     <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
-                    <li class="staffBoxFontBoxLi">c. It must contain one digit and one special character.</li>
+                    <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special character.</li>
                     <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <button>User Information</button>
+    <button id="btHide">Customers Information</button>
 
-    <div id="hide" class="profile-out">
+    <div id="hide" class="profile-out" style="display: none;">
         <div class="profile-in">
             <div class="profile">
                 <div class="user-photo">
