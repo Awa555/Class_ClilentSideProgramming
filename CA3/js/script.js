@@ -24,39 +24,37 @@ function validate() {
 }
 
 
-// User
-fetch("../API/users.json")
-    .then((response) => {
-        // handle response data
-    })
 
-    .catch((err) => {
-        // handle errors
-    });
-    
+// User
+const generateUser = () => {
+    fetch("https://randomuser.me/api/?results=5")
+        .then(response => response.json())
+        .then(data => parseData(data));
+}
+
 const displayUserName = ({ title, last, first }) => {
-    document.querySelector(
-        ".user-name"
-    ).textContent = `${title} ${first} ${last}`;
+    document.querySelector(".user-name")
+        .textContent = `${title} ${first} ${last}`;
 };
 
-const displayUserPhoto = ({ large }) => {
-    document
-        .querySelector(".user-photo")
-        .getElementsByTagName("img")[0].src = large;
+const displayUserPhoto = ({ medium }) => {
+    document.querySelector(".user-photo").src = `${medium}`;
 };
 
 const displayUserPhone = ({ phone, cell }) => {
-    document.querySelector(
-        ".user-phone"
-    ).textContent = `${phone} / ${cell}`;
+    document.querySelector(".user-phone")
+        .textContent = `${phone} / ${cell}`;
 };
 
 const displayUserAddress = ({ street, city, state }) => {
     const { name, number } = street;
-    document.querySelector(
-        ".user-address"
-    ).textContent = `${number} ${name}, ${city}, ${state}`;
+    document.querySelector(".user-address")
+        .textContent = `${number} ${name}, ${city}, ${state}`;
+};
+
+const displayUserAge = ({ age }) => {
+    document.querySelector(".user-age")
+        .textContent = `${age} years old`;
 };
 
 const displayUserInfo = (data) => {
@@ -78,10 +76,12 @@ const displayUserInfo = (data) => {
     const { location } = profile;
     displayUserAddress(location);
 
+    const { dob } = profile;
+    displayUserAge(dob);
 };
 
 const getUserInfo = () => {
-    const api = "https://randomuser.me/api/";
+    const api = "https://randomuser.me/api/?results=5";
 
     // make API call here
     fetch(api)
@@ -89,6 +89,7 @@ const getUserInfo = () => {
         .then((data) => {
             displayUserInfo(data);
         })
-        .catch((error) => alert("error getting API resources"));
+
+
 };
 getUserInfo();

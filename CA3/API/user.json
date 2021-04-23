@@ -1,62 +1,290 @@
 {
-    "results": [
-      {
-        "gender": "male",
-        "name": {
-          "title": "mr",
-          "first": "brad",
-          "last": "gibson"
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Mademoiselle",
+        "first": "Giulia",
+        "last": "Guillot"
+      },
+      "location": {
+        "street": {
+          "number": 3707,
+          "name": "Rue Bossuet"
         },
-        "location": {
-          "street": "9278 new road",
-          "city": "kilcoole",
-          "state": "waterford",
-          "postcode": "93027",
-          "coordinates": {
-            "latitude": "20.9267",
-            "longitude": "-7.9310"
-          },
-          "timezone": {
-            "offset": "-3:30",
-            "description": "Newfoundland"
-          }
+        "city": "Corippo",
+        "state": "Bern",
+        "country": "Switzerland",
+        "postcode": 2603,
+        "coordinates": {
+          "latitude": "-51.6732",
+          "longitude": "102.5154"
         },
-        "email": "brad.gibson@example.com",
-        "login": {
-          "uuid": "155e77ee-ba6d-486f-95ce-0e0c0fb4b919",
-          "username": "silverswan131",
-          "password": "firewall",
-          "salt": "TQA1Gz7x",
-          "md5": "dc523cb313b63dfe5be2140b0c05b3bc",
-          "sha1": "7a4aa07d1bedcc6bcf4b7f8856643492c191540d",
-          "sha256": "74364e96174afa7d17ee52dd2c9c7a4651fe1254f471a78bda0190135dcd3480"
+        "timezone": {
+          "offset": "+4:30",
+          "description": "Kabul"
+        }
+      },
+      "email": "giulia.guillot@example.com",
+      "login": {
+        "uuid": "56ba5633-3d03-405e-b3ca-6a20202a0c25",
+        "username": "redgorilla695",
+        "password": "sandra",
+        "salt": "2bnbu4Em",
+        "md5": "052b61404394f43221c0a3b8fdc43f7a",
+        "sha1": "4e88e194169b965bc98d6902ce4b8c74ba420694",
+        "sha256": "27241e7dd272555c6c08cf49cd3f13e866071c9e6f0f6deb5d571054e4d0c2e4"
+      },
+      "dob": {
+        "date": "1951-11-28T23:57:11.557Z",
+        "age": 70
+      },
+      "registered": {
+        "date": "2002-06-08T07:23:00.287Z",
+        "age": 19
+      },
+      "phone": "078 071 30 39",
+      "cell": "075 995 67 90",
+      "id": {
+        "name": "AVS",
+        "value": "756.8145.4772.34"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/15.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/15.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/15.jpg"
+      },
+      "nat": "CH"
+    },
+    {
+      "gender": "female",
+      "name": {
+        "title": "Miss",
+        "first": "Eva",
+        "last": "Grewal"
+      },
+      "location": {
+        "street": {
+          "number": 4843,
+          "name": "Simcoe St"
         },
-        "dob": {
-          "date": "1993-07-20T09:44:18.674Z",
-          "age": 26
+        "city": "Chelsea",
+        "state": "Québec",
+        "country": "Canada",
+        "postcode": "F0F 7R0",
+        "coordinates": {
+          "latitude": "-82.0077",
+          "longitude": "-53.4694"
         },
-        "registered": {
-          "date": "2002-05-21T10:59:49.966Z",
-          "age": 17
+        "timezone": {
+          "offset": "-4:00",
+          "description": "Atlantic Time (Canada), Caracas, La Paz"
+        }
+      },
+      "email": "eva.grewal@example.com",
+      "login": {
+        "uuid": "e1ef9ace-1d26-486c-b466-2b66247d2d01",
+        "username": "ticklishmouse904",
+        "password": "leonard",
+        "salt": "hyhLfWIn",
+        "md5": "3da8fa4f0f5adf8a4849eba6f4232556",
+        "sha1": "9d016bbcf9510c7496ea1aeee6931ed3b6075730",
+        "sha256": "3b4e2e15562bd10f7e3760e89c8c3857564076d16a38d6e8f84ccc51116e95cd"
+      },
+      "dob": {
+        "date": "1974-05-19T19:18:19.743Z",
+        "age": 47
+      },
+      "registered": {
+        "date": "2013-03-22T05:34:22.902Z",
+        "age": 8
+      },
+      "phone": "375-094-6621",
+      "cell": "438-938-5658",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/4.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/4.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/4.jpg"
+      },
+      "nat": "CA"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Ross",
+        "last": "Hayes"
+      },
+      "location": {
+        "street": {
+          "number": 6205,
+          "name": "W Sherman Dr"
         },
-        "phone": "011-962-7516",
-        "cell": "081-454-0666",
-        "id": {
-          "name": "PPS",
-          "value": "0390511T"
+        "city": "Mackay",
+        "state": "Tasmania",
+        "country": "Australia",
+        "postcode": 6697,
+        "coordinates": {
+          "latitude": "-19.5582",
+          "longitude": "-136.7103"
         },
-        "picture": {
-          "large": "https://randomuser.me/api/portraits/men/75.jpg",
-          "medium": "https://randomuser.me/api/portraits/med/men/75.jpg",
-          "thumbnail": "https://randomuser.me/api/portraits/thumb/men/75.jpg"
+        "timezone": {
+          "offset": "+5:45",
+          "description": "Kathmandu"
+        }
+      },
+      "email": "ross.hayes@example.com",
+      "login": {
+        "uuid": "91c838d9-e8a0-44c9-8f7a-a3275df4d8a9",
+        "username": "smallostrich680",
+        "password": "1955",
+        "salt": "y13Wsccb",
+        "md5": "bed1bd627712629a9226e5e5ece853a8",
+        "sha1": "30bb41d948e8242ae23e1bebf1aa44ff00716fb5",
+        "sha256": "7e09fb827d686457bcb0b1a2fd630f95bb4c208da19aee28d29c4a5895b6bbc5"
+      },
+      "dob": {
+        "date": "1993-07-19T03:23:40.515Z",
+        "age": 28
+      },
+      "registered": {
+        "date": "2012-09-17T22:59:54.092Z",
+        "age": 9
+      },
+      "phone": "02-3204-7592",
+      "cell": "0430-280-599",
+      "id": {
+        "name": "TFN",
+        "value": "046322052"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/20.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/20.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/20.jpg"
+      },
+      "nat": "AU"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Anthony",
+        "last": "Martinez"
+      },
+      "location": {
+        "street": {
+          "number": 2189,
+          "name": "Spring St"
         },
-        "nat": "IE"
-      }
-    ],
-    "info": {
-      "seed": "fea8be3e64777240",
-      "results": 1,
-      "page": 1,
-      "version": "1.3"
+        "city": "Houston",
+        "state": "Nevada",
+        "country": "United States",
+        "postcode": 87223,
+        "coordinates": {
+          "latitude": "70.5923",
+          "longitude": "-97.7829"
+        },
+        "timezone": {
+          "offset": "+4:30",
+          "description": "Kabul"
+        }
+      },
+      "email": "anthony.martinez@example.com",
+      "login": {
+        "uuid": "03ca006d-6c9e-48bd-adec-40000daae933",
+        "username": "happycat567",
+        "password": "qiang",
+        "salt": "pA5AU0MU",
+        "md5": "8fa5e5a1ff8e37f9f507b21c1291a4b2",
+        "sha1": "d8f8475cda427f8238c7c53fdec0f442e344f212",
+        "sha256": "2237974689aade6b1e425179217e650ecaa392260641f58d0467dab6489892dd"
+      },
+      "dob": {
+        "date": "1945-05-27T14:37:38.752Z",
+        "age": 76
+      },
+      "registered": {
+        "date": "2005-09-25T18:06:47.650Z",
+        "age": 16
+      },
+      "phone": "(158)-551-7737",
+      "cell": "(706)-333-9052",
+      "id": {
+        "name": "SSN",
+        "value": "598-01-0277"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/54.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/54.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/54.jpg"
+      },
+      "nat": "US"
+    },
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Wilfried",
+        "last": "Irmer"
+      },
+      "location": {
+        "street": {
+          "number": 4758,
+          "name": "Finkenweg"
+        },
+        "city": "Romrod",
+        "state": "Bayern",
+        "country": "Germany",
+        "postcode": 75123,
+        "coordinates": {
+          "latitude": "-20.6809",
+          "longitude": "-72.3097"
+        },
+        "timezone": {
+          "offset": "-11:00",
+          "description": "Midway Island, Samoa"
+        }
+      },
+      "email": "wilfried.irmer@example.com",
+      "login": {
+        "uuid": "16b9f451-4d19-4ff1-aa44-4084af408a3c",
+        "username": "happyfrog805",
+        "password": "qawsed",
+        "salt": "I8Hhdxm5",
+        "md5": "b3eb5b3a052731b211b1e774037d4d0c",
+        "sha1": "d12af30c1e6292e71a24ea92fe0ca2275333b9e5",
+        "sha256": "6ef36d8606e630879216dee7ee65d511dbfe6d0735319e81e20ea8631ef73fa3"
+      },
+      "dob": {
+        "date": "1994-11-09T03:53:58.770Z",
+        "age": 27
+      },
+      "registered": {
+        "date": "2004-05-02T23:29:22.164Z",
+        "age": 17
+      },
+      "phone": "0906-3519295",
+      "cell": "0179-6793258",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/3.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/3.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/3.jpg"
+      },
+      "nat": "DE"
     }
+  ],
+  "info": {
+    "seed": "69a505c9c27bb362",
+    "results": 5,
+    "page": 1,
+    "version": "1.3"
   }
+}
