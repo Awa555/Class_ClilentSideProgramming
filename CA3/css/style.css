@@ -7,10 +7,17 @@ body {
 
 
 
-/* Title Bar */
-.titleBar {
+/* Top Navigation Bar */
+.nvaBar {
     background-color: rgb(145, 12, 12);
     padding: 0.1em 1.8em;
+    overflow: hidden;
+}
+
+.navTitle {    
+    width: 40%;
+    float: left;
+    display: block;
 }
 
 h2 {
@@ -18,9 +25,50 @@ h2 {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.navbarUI {    
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    list-style: none;
+    justify-content:space-between; 
+    float: right; 
+    padding-top: 0.5rem;
+}
+
+.navbar-li {
+    padding: 0 2rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px rgba(84, 84, 84, 0.612);
+}
+
+.nav-link {
+    color:#fff;
+    text-decoration:none;
+}
+
+.nav-link:hover {
+    color: rgb(125, 125, 125);
+    text-decoration:none;
+}
+
+.nav-link:focus {
+    color: rgb(125, 125, 125);
+    text-decoration:none;
+}
+
+.nav-link:active {
+    color: rgb(125, 125, 125);
+    display: block;
+}
 
 
-/* StaffPassword Bar */
+
+
+
+
+/* StaffPassword Box */
 .staffBox {
     background-image: url(../image/img02.jpg);
     background-repeat: repeat-x;
@@ -41,10 +89,12 @@ h2 {
 
 .staffBoxFontBoxUl {
     list-style: none;
+    margin-left: -2.4em;
 }
 
 .staffBoxFontBoxLi {
-    padding-bottom: 0.5em;
+padding-bottom: 0.5em;
+    
 }
 
 .stPW {
@@ -84,13 +134,13 @@ input:hover[type="submit"] {
 
 
 
-/* User */
+/* Customer */
 .profile-out {
     max-width: 200px;
     margin: 0 auto;
     text-align: center;
     padding: 8px 0 7px 0;  
-  }
+}
 
 .profile-in {
     width: 80%;
@@ -99,25 +149,40 @@ input:hover[type="submit"] {
     color: white;
     padding:  8px 0 7px 0;
     border-radius: 1em;
-  }
+}
   
 .profile {
     width: 90%;
     margin: auto;
-  }
+}
 
-  .user-photo {
+.user-photo {
     width: 100px; 
     border-radius: 50%;
     border: rgba(255, 255, 255, 0.434) 2px solid;
     margin: auto;
-  }
+}
 
 .user-photo img {
     border-radius: 50%;
     border: 3px solid #767777;
-  }
+}
   
 p{
     font-size: 12px;
-  }
+}
+
+.userA {
+    background-color: brown;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 0.5rem;
+    box-shadow: gray ;
+    text-shadow: 1px 1px rgba(74, 74, 74, 0.55);
+}
+
+.userA:hover {
+    color: pink;
+}
