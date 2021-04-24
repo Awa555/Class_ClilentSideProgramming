@@ -23,6 +23,9 @@ function validate() {
     }
 }
 
+
+
+// Customers Information Button
 $(document).ready(function () {
     $("#btHide").click(function () {
         $("#hide").slideToggle();
@@ -31,32 +34,73 @@ $(document).ready(function () {
 });
 
 
-// User
-$(document).ready(function() {
 
-    $.ajax({
-        url: 'https://randomuser.me/api/',
-        dataType: "json",
-        success: function (data) {
-            //console.log(data);
+// Customers
+$(document).ready(function () {
 
-            var user = data.results[0].user;
-            var picture = user.picture.thumbnal;
-            var name = user.name.title + '. ' + user.name.first + ' ' + user.name.last;
-            var email = user.email;
 
-            //prepare DOM object
-            var image = $('<img>');
-            imageTag.prop('src', user.picture.thumbnal);
+    var url = "https://randomuser.me/api/?results=5";
+    var u = "";
 
-            var nameTag = $('<div class = "name">');
-            nameTag.html(name);
+    getUsers(url);
 
-            var emailTag = $('<a class = "email">');
-            emailTag.html(email).prop('href', 'mailto:' + email);
+    function getUsers(url) {
+        fetch(url)
+            .then((response) => (response.json()))
+            .then(function (data) {
+                console.log(data);
 
-            //insert DOM object into DOM
-            $('#user').append(imageTag).append(nameTag);
-        }
-    });
+                data.results.forEach(user => {
+
+                    u = `<div class ="well">
+
+                    <img src = "${user.picture.thumbnail}"><br>
+
+                    <span>${user.name.title + '. ' + user.name.fitst + ' ' + user.name.last}</span>
+                    <p>${'DOB: ' + user.dob.date }</p>
+                    <p>${'Gender: ' + '  /  Age: ' + user.dob.age}</p>
+                    <p>${'Phone: ' + user.phone + ' / ' + user.cell}</p>
+                    <p>${'Email: ' + user.email}</p>
+                    <p>${'PostCode: ' + user.location.postcode}</p>
+                    <p>${'Address: ' + user.location.street.number + ' ' + user.location.street.name + ' , ' + user.location.city + ' . ' + user.location.state}</p>
+                    
+                    </div>
+                    `;
+
+                    $("#results").append(u);
+                })
+            });
+    }
+
 });
+
+// $(document).ready(function() {
+
+//     $.ajax({
+//         url: 'https://randomuser.me/api/',
+//         dataType: 'json',
+//         success: function (data) {
+//             console.log(data);
+
+//             const user = data.results[0].user;
+//             var imageTag = user.picture.thumbnail;
+//             var name = user.name.title + '. ' + user.name.first + ' ' + user.name.last;
+//             var email = user.email;
+//             var phone = user.phone;
+//             var age = user.dob.age;
+
+//             //prepare DOM object
+//             var image = $('<img>');
+//             imageTag.prop('src', user.picture.thumbnail);
+
+//             var nameTag = $('<div class = "name">');
+//             nameTag.html(name);
+
+//             var emailTag = $('<a class = "email">');
+//             emailTag.html(email).prop('href', 'mailto:' + email);
+
+//             //insert DOM object into DOM
+//             $('#user').append(imageTag).append(nameTag).append(emailTag);
+//         }
+//     });
+// });
