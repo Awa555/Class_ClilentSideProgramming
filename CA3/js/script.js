@@ -34,27 +34,34 @@ const generateUser = () => {
 
 const displayUserName = ({ title, last, first }) => {
     document.querySelector(".user-name")
-        .textContent = `${title} ${first} ${last}`;
+        .textContent = `Name: ${title}. ${first} ${last}`;
 };
 
-const displayUserPhoto = ({ medium }) => {
-    document.querySelector(".user-photo").src = `${medium}`;
+const displayUserPhoto = ({ thumbnail }) => {
+    document.querySelector(".user-photo").src = `${thumbnail}`;
 };
 
 const displayUserPhone = ({ phone, cell }) => {
     document.querySelector(".user-phone")
-        .textContent = `${phone} / ${cell}`;
+        .textContent = `Phone: ${phone} / ${cell}`;
 };
 
 const displayUserAddress = ({ street, city, state }) => {
     const { name, number } = street;
     document.querySelector(".user-address")
-        .textContent = `${number} ${name}, ${city}, ${state}`;
+        .textContent = `Address: ${number} ${name}, ${city}, ${state}`;
 };
 
-const displayUserAge = ({ age }) => {
+const displayUserAge = ({ date, age }) => {
     document.querySelector(".user-age")
-        .textContent = `${age} years old`;
+        .textContent = `DOB: ${date}  Age: ${age}`;
+};
+
+
+
+const displayUserEmail = ({ email }) => {
+    document.querySelector(".user-email")
+        .textContent = `Email: ${email}`;
 };
 
 const displayUserInfo = (data) => {
@@ -63,7 +70,7 @@ const displayUserInfo = (data) => {
     console.log(data);
     //using object destructuring
     const { results } = data;
-    const [profile] = results;
+    const [ profile ] = results;
 
     const { name } = profile;
     displayUserName(name);
@@ -78,6 +85,9 @@ const displayUserInfo = (data) => {
 
     const { dob } = profile;
     displayUserAge(dob);
+
+    const { email } = profile;
+    displayUserEmail(email);
 };
 
 const getUserInfo = () => {

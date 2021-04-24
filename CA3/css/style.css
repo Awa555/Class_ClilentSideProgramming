@@ -5,13 +5,19 @@ body {
     width: 100%;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 
 
 /* Top Navigation Bar */
 .nvaBar {
     background-color: rgb(145, 12, 12);
-    padding: 0.1em 1.8em;
+    padding: 0.1em 0.8em 0.1em 1.8em;
     overflow: hidden;
+    position: relative;
 }
 
 .navTitle {    
@@ -23,6 +29,7 @@ body {
 h2 {
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px rgba(26, 26, 26, 0.673);
 }
 
 .navbarUI {    
@@ -50,21 +57,11 @@ h2 {
 
 .nav-link:hover {
     color: rgb(125, 125, 125);
-    text-decoration:none;
-}
-
-.nav-link:focus {
-    color: rgb(125, 125, 125);
-    text-decoration:none;
 }
 
 .nav-link:active {
     color: rgb(125, 125, 125);
-    display: block;
 }
-
-
-
 
 
 
@@ -72,10 +69,11 @@ h2 {
 .staffBox {
     background-image: url(../image/img02.jpg);
     background-repeat: repeat-x;
+    position: relative;
 }
 
 .staffBoxImg {
-    padding: 0.2em 3em 8em 1.8em;
+    padding: 0.2em 3em 1em 1.8em;
     background-image: url(../image/img01.jpg);
     background-repeat: no-repeat;
 }
@@ -135,6 +133,31 @@ input:hover[type="submit"] {
 
 
 /* Customer */
+.userBox {
+    position: relative;
+    padding: 1rem 0 0 0.5em;
+}
+
+.userA {
+    background-color: rgb(145, 12, 12);
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 0.5rem;
+    box-shadow: gray 1px 1px 2px;
+    text-shadow: 1px 1px rgba(74, 74, 74, 0.55);
+    margin-left: 1.5rem;;
+}
+
+.userA:hover {
+    color: pink;
+}
+
+.profileBox {
+    padding: 2rem;
+}
+
 .profile-out {
     max-width: 200px;
     margin: 0 auto;
@@ -172,17 +195,3 @@ p{
     font-size: 12px;
 }
 
-.userA {
-    background-color: brown;
-    color: white;
-    padding: 1em 1.5em;
-    text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-radius: 0.5rem;
-    box-shadow: gray ;
-    text-shadow: 1px 1px rgba(74, 74, 74, 0.55);
-}
-
-.userA:hover {
-    color: pink;
-}

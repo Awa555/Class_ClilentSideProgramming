@@ -31,57 +31,65 @@
 </head>
 
 <body>
-    <!-- Top Navigation Bar --->
-    <div class="nvaBar">
-        <h2 class="navTitle">Restaurant Order System</h2>
-        <ul class="navbarUI">
-            <li class="navbar-li active">
-                <a class="nav-link" href="#" title="Home">Home</a>
-            </li>
-            <li class="navbar-li">
-                <a class="nav-link" href="page2.html" title="Page2">Page 2</a>
-            </li>
-        </ul>
-        
-    </div>
+    <div class="wrapper">
+        <!-- Top Navigation Bar --->
+        <div class="nvaBar">
+            <h2 class="navTitle">Restaurant Order System</h2>
+            <ul class="navbarUI">
+                <li class="navbar-li active">
+                    <a class="nav-link" href="#" title="Home">Home</a>
+                </li>
+                <li class="navbar-li">
+                    <a class="nav-link" href="page2.html" title="Page2">Page 2</a>
+                </li>
+            </ul>
 
-    <!-- Staff Password Box --->
-    <div class="staffBox">
-        <div class="staffBoxImg">
-            <div class="staffBoxFontBox">
-                <label for="Staff Password" id="lblStaff">
-                    <p class="stPW">Staff Password Validator</p>
-                </label>
-                <input type="text" id="StaffPW" placeholder="Input Staff Password">
-                <input onclick="validate()" type="submit" value="Check Password">
-                <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
-                <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
-
-                <ul class="staffBoxFontBoxUl">
-                    <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
-                    <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
-                    <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
-                        character.</li>
-                    <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
-                </ul>
-            </div>
         </div>
-    </div>
 
-    <!-- Customer Information --->
-    <a href="#" class="userA" id="btHide">Customers Information</a>
+        <!-- Staff Password Box --->
+        <div class="staffBox">
+            <div class="staffBoxImg">
+                <div class="staffBoxFontBox">
+                    <label for="Staff Password" id="lblStaff">
+                        <p class="stPW">Staff Password Validator</p>
+                    </label>
+                    <input type="text" id="StaffPW" placeholder="Input Staff Password">
+                    <input onclick="validate()" type="submit" value="Check Password">
+                    <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
+                    <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
 
-    <div id="hide" class="profile-out" style="display: none">
-        <div class="profile-in">
-            <div class="profile">   
-                <img class="user-photo">
-                <h3 class="user-name">User Name</h3>
-                <p class="user-phone">User Phone</p>
-                <p class="user-address">User Address</p>
-                <p class="user-age">User age</p>
+                    <ul class="staffBoxFontBoxUl">
+                        <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
+                        <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
+                        <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
+                            character.</li>
+                        <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
+        <!-- Customer Information --->
+        <div class="userBox">
+            <a href="#" class="userA" id="btHide">Customers Information</a>
+            <div class="profileBox">
+                <div id="hide" class="profile-out" style="display: none">
+                    <div class="profile-in">
+                        <div class="profile">
+                            <img class="user-photo">
+                            <h3 class="user-name">Name</h3>
+                            <p class="user-age">Age</p>
+                            <p class="user-phone">Phone</p>
+                            <p class="user-email">Email</p>
+                            <p class="user-address">Address</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>
