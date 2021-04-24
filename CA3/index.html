@@ -11,6 +11,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -18,14 +19,6 @@
                 $("#hide").slideToggle();
                 $("#btHide").toggleClass("active");
             });
-        });
-
-        $.ajax({
-            url: 'https://randomuser.me/api/',
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-            }
         });
     </script>
 </head>
@@ -77,11 +70,8 @@
                     <div class="profile-in">
                         <div class="profile">
                             <img class="user-photo">
-                            <h3 class="user-name">Name</h3>
-                            <p class="user-age">Age</p>
-                            <p class="user-phone">Phone</p>
-                            <p class="user-email">Email</p>
-                            <p class="user-address">Address</p>
+                            <h3 id="user"></h3>
+                            
                             
                         </div>
                     </div>

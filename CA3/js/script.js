@@ -23,83 +23,40 @@ function validate() {
     }
 }
 
+$(document).ready(function () {
+    $("#btHide").click(function () {
+        $("#hide").slideToggle();
+        $("#btHide").toggleClass("active");
+    });
+});
 
 
 // User
-const generateUser = () => {
-    fetch("https://randomuser.me/api/?results=5")
-        .then(response => response.json())
-        .then(data => parseData(data));
-}
+$(document).ready(function() {
 
-const displayUserName = ({ title, last, first }) => {
-    document.querySelector(".user-name")
-        .textContent = `Name: ${title}. ${first} ${last}`;
-};
+    $.ajax({
+        url: 'https://randomuser.me/api/',
+        dataType: "json",
+        success: function (data) {
+            //console.log(data);
 
-const displayUserPhoto = ({ thumbnail }) => {
-    document.querySelector(".user-photo").src = `${thumbnail}`;
-};
+            var user = data.results[0].user;
+            var picture = user.picture.thumbnal;
+            var name = user.name.title + '. ' + user.name.first + ' ' + user.name.last;
+            var email = user.email;
 
-const displayUserPhone = ({ phone, cell }) => {
-    document.querySelector(".user-phone")
-        .textContent = `Phone: ${phone} / ${cell}`;
-};
+            //prepare DOM object
+            var image = $('<img>');
+            imageTag.prop('src', user.picture.thumbnal);
 
-const displayUserAddress = ({ street, city, state }) => {
-    const { name, number } = street;
-    document.querySelector(".user-address")
-        .textContent = `Address: ${number} ${name}, ${city}, ${state}`;
-};
+            var nameTag = $('<div class = "name">');
+            nameTag.html(name);
 
-const displayUserAge = ({ date, age }) => {
-    document.querySelector(".user-age")
-        .textContent = `DOB: ${date}  Age: ${age}`;
-};
+            var emailTag = $('<a class = "email">');
+            emailTag.html(email).prop('href', 'mailto:' + email);
 
-
-
-const displayUserEmail = ({ email }) => {
-    document.querySelector(".user-email")
-        .textContent = `Email: ${email}`;
-};
-
-const displayUserInfo = (data) => {
-    if (!data) return;
-
-    console.log(data);
-    //using object destructuring
-    const { results } = data;
-    const [ profile ] = results;
-
-    const { name } = profile;
-    displayUserName(name);
-
-    const { picture } = profile;
-    displayUserPhoto(picture);
-
-    displayUserPhone(profile);
-
-    const { location } = profile;
-    displayUserAddress(location);
-
-    const { dob } = profile;
-    displayUserAge(dob);
-
-    const { email } = profile;
-    displayUserEmail(email);
-};
-
-const getUserInfo = () => {
-    const api = "https://randomuser.me/api/?results=5";
-
-    // make API call here
-    fetch(api)
-        .then((response) => response.json())
-        .then((data) => {
-            displayUserInfo(data);
-        })
-
-
-};
-getUserInfo();
+            //insert DOM object into DOM
+            $('#user').append(imageTag).append(nameTag);
+        }
+    });
+});
