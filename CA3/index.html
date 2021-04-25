@@ -9,16 +9,19 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- jquery -->
-    <script src="http://code.jquery.com/jquery-2.2.4.js"></script>   
+    <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
     <!-- My JavaScript -->
     <script src="js/script.js"></script>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <!-- Top Navigation Bar --->
         <div class="nvaBar">
-            <h2 class="navTitle">Restaurant Order System</h2>
+            <div class="navTitle">
+                <div class="logo"></div>
+                <h2>Restaurant Order System</h2>
+            </div>
             <ul class="navbarUI">
                 <li class="navbar-li active">
                     <a class="nav-link" href="#" title="Home">Home</a>
@@ -27,29 +30,34 @@
                     <a class="nav-link" href="page2.html" title="Page2">Page 2</a>
                 </li>
             </ul>
+        </div>
 
+        <!-- Banner --->
+        <div class="banner">
+            <div class="bannerImg">
+                <h2 class="bannerH2">Always face the customers with beautiful smiles ^^</h2>
+            </div>
         </div>
 
         <!-- Staff Password Box --->
         <div class="staffBox">
-            <div class="staffBoxImg">
-                <div class="staffBoxFontBox">
-                    <label for="Staff Password" id="lblStaff">
-                        <p class="stPW">Staff Password Validator</p>
-                    </label>
+            <div class="staffBoxFontBox">
+                <label for="Staff Password" id="lblStaff">
+                    <span class="stPW">Staff Password Validator</span>
                     <input type="text" id="StaffPW" placeholder="Input Staff Password">
                     <input onclick="validate()" type="submit" value="Check Password">
-                    <label id="inValid" style="color:red; visibility:hidden">Invalid Password</label>
-                    <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
+                </label>
 
-                    <ul class="staffBoxFontBoxUl">
-                        <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
-                        <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
-                        <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
-                            character.</li>
-                        <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
-                    </ul>
-                </div>
+                <label id="inValid" style="color:red; visibility:hidden">Invalid Password, please reenter.</label>
+                <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
+
+                <ul class="staffBoxFontBoxUl">
+                    <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
+                    <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
+                    <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
+                        character.</li>
+                    <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
+                </ul>
             </div>
         </div>
 
@@ -60,10 +68,7 @@
                 <div id="hide" class="profile-out" style="display: none">
                     <div class="profile-in">
                         <div class="profile">
-                            <img class="user-photo">
                             <h3 id="results"></h3>
-                            
-                            
                         </div>
                     </div>
                 </div>
@@ -73,6 +78,10 @@
         <!-- Menu --->
         <div>Menu options</div>
 
+        <!-- Footer --->
+        <div id="footer">
+            <p id="footerP">Copyright © 2021 Awa. All rights reserved.</p>
+        </div>
     </div>
 </body>
 
