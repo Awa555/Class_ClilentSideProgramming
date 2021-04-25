@@ -19,51 +19,53 @@
         <!-- Top Navigation Bar --->
         <div class="nvaBar">
             <div class="navTitle">
-                <div class="logo"></div>
+                <div class="logo" title="Logo"></div>
                 <h2>Restaurant Order System</h2>
             </div>
             <ul class="navbarUI">
-                <li class="navbar-li active">
-                    <a class="nav-link" href="#" title="Home">Home</a>
+                <li class="navbar-li">
+                    <a class="active" href="#" title="Home">Home</a>
                 </li>
                 <li class="navbar-li">
-                    <a class="nav-link" href="page2.html" title="Page2">Page 2</a>
+                    <a href="page2.html" title="Page2">Page 2</a>
                 </li>
             </ul>
         </div>
 
         <!-- Banner --->
         <div class="banner">
-            <div class="bannerImg">
+            <div class="bannerImg" title="This is image.">
                 <h2 class="bannerH2">Always face the customers with beautiful smiles ^^</h2>
             </div>
         </div>
 
         <!-- Staff Password Box --->
         <div class="staffBox">
-            <div class="staffBoxFontBox">
-                <label for="Staff Password" id="lblStaff">
-                    <span class="stPW">Staff Password Validator</span>
-                    <input type="text" id="StaffPW" placeholder="Input Staff Password">
-                    <input onclick="validate()" type="submit" value="Check Password">
-                </label>
+            <div class="staffBoxIN">
+                <div class="staffBoxFontBox">
+                    <label for="Staff Password" id="lblStaff">
+                        <span class="stPW">Staff Password Validator</span>
+                        <input type="text" id="StaffPW" placeholder="Input Staff Password">
+                        <input onclick="validate()" type="submit" value="Check Password" title="check Password">
+                    </label>
 
-                <label id="inValid" style="color:red; visibility:hidden">Invalid Password, please reenter.</label>
-                <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
+                    <label id="inValid" style="color:red; visibility:hidden">Invalid Password, please reenter.</label>
+                    <label id="Valid" style="color: red; visibility:hidden">Valid Password</label>
 
-                <ul class="staffBoxFontBoxUl">
-                    <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
-                    <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
-                    <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
-                        character.</li>
-                    <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
-                </ul>
+                    <ul class="staffBoxFontBoxUl">
+                        <li class="staffBoxFontBoxLi">a. The password must have at least one lowercase letter.</li>
+                        <li class="staffBoxFontBoxLi">b. The password must have at least one uppercase letter.</li>
+                        <li class="staffBoxFontBoxLi">c. It must contain (at least) one digit and (at least) one special
+                            character.</li>
+                        <li class="staffBoxFontBoxLi">d. And it must be at least eight characters long.</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <!-- Customer Information --->
         <div class="userBox">
-            <a href="#" class="userA" id="btHide">Customers Information</a>
+            <a href="#" class="userA" id="btHide" title="Customers Information">Customers Information</a>
             <div class="profileBox">
                 <div id="hide" class="profile-out" style="display: none">
                     <div class="profile-in">
@@ -76,12 +78,45 @@
         </div>
 
         <!-- Menu --->
-        <div>Menu options</div>
+        <div id="menuBox">
+            <div>
+                <h2>Menu options</h2>
+            </div>
+            <div id="menuNav">
+                <a href="javascript:void(0)" class="bar-item btn active tablink testbtn"
+                    onclick="openClass(event, 'class1')">Starters</a>
+                <a href="javascript:void(0)" class="bar-item btn tablink" onclick="openClass(event, 'class2')">Main</a>
+                <a href="javascript:void(0)" class="bar-item btn tablink"
+                    onclick="openClass(event, 'class3')">Dessert</a>
+                <a href="javascript:void(0)" class="bar-item btn tablink"
+                    onclick="openClass(event, 'class4')">Drinks</a>
+            </div>
+            <div class="menuContentBox">
+                <div class="menuCountent">
+                    <div id="class1" class="content class">
+                        <img src="image/starter-1.png" alt="starter" width="200px">
+                        <p>Sa</p>
+                        <p>39</p>
+                        <p>some text about...</p>
+                    </div>
+
+                    <div id="class2" class="content class">
+                        <img src="image/starter-1.png" alt="starter" width="200px">
+                        <p>fish</p>
+                        <p>49</p>
+                        <p>some text about...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer --->
         <div id="footer">
             <p id="footerP">Copyright © 2021 Awa. All rights reserved.</p>
         </div>
+
+        <!-- Go to top --->
+        <p id="back-to-top"><a href="#top"><span></span></a></p>
     </div>
 </body>
 

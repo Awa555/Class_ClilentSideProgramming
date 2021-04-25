@@ -5,14 +5,14 @@ function validate() {
 
     var regex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 
-    if (regex.test(staffPassword)) {   
+    if (regex.test(staffPassword)) {
 
         document.getElementById('Valid').style.visibility = "visible";
 
         document.getElementById('inValid').style.visibility = "hidden";
     }
 
-    else {   
+    else {
 
         document.getElementById('inValid').style.visibility = "visible";
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
         $("#hide").slideToggle();
 
         $("#btHide").toggleClass("active");
-        
+
     });
 });
 
@@ -57,7 +57,7 @@ $(document).ready(function () {
                     <img src = "${user.picture.thumbnail}"><br>
 
                     <span>${user.name.title + '. ' + user.name.fitst + ' ' + user.name.last}</span>
-                    <p>${'DOB: ' + user.dob.date }</p>
+                    <p>${'DOB: ' + user.dob.date}</p>
                     <p>${'Gender: ' + '  /  Age: ' + user.dob.age}</p>
                     <p>${'Phone: ' + user.phone + ' / ' + user.cell}</p>
                     <p>${'Email: ' + user.email}</p>
@@ -73,3 +73,57 @@ $(document).ready(function () {
     }
 });
 
+
+
+// Go to top
+$(document).ready(function () {
+
+    $("#back-to-top").hide();
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                $("#back-to-top").fadeIn(400);
+            }
+            else {
+                $("#back-to-top").fadeOut(400);
+            }
+        });
+
+        $("#back-to-top").click(function () {
+            $('body,html').animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+    });
+});
+
+
+
+// Menu
+function openClass(evt, className) {
+
+    var i, x, tablinks;
+
+    x = document.getElementsByClassName("class");
+
+    for (i = 0; i < x.length; i++) {
+
+        x[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablink");
+
+    for (i = 0; i < x.length; i++) {
+
+        tablinks[i].classList.remove("red");
+
+    }
+
+    document.getElementById(className).style.display = "block";
+
+    evt.currentTarget.classList.add("red");
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+
+mybtn.click();
