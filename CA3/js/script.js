@@ -100,30 +100,34 @@ $(document).ready(function () {
 
 
 // Menu
-function openClass(evt, className) {
+const tabs = document.querySelector(".menuNav");
 
-    var i, x, tablinks;
+const tabButton = document.querySelectorAll(".tab-button");
 
-    x = document.getElementsByClassName("class");
+const contents = document.querySelectorAll(".content");
 
-    for (i = 0; i < x.length; i++) {
+tabs.onclick = e => {
 
-        x[i].style.display = "none";
+    const id = e.target.dataset.id;
+
+    if (id) {
+
+        tabButton.forEach(btn => {
+
+            btn.classList.remove("active");
+        });
+
+        e.target.classList.add("active");
+
+        contents.forEach(content => {
+
+            content.classList.remove("active");
+        });
+
+        const element = document.getElementById(id);
+
+        element.classList.add("active");
     }
-
-    tablinks = document.getElementsByClassName("tablink");
-
-    for (i = 0; i < x.length; i++) {
-
-        tablinks[i].classList.remove("red");
-
-    }
-
-    document.getElementById(className).style.display = "block";
-
-    evt.currentTarget.classList.add("red");
 }
 
-var mybtn = document.getElementsByClassName("testbtn")[0];
 
-mybtn.click();

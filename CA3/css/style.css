@@ -261,60 +261,57 @@ p{
 
 
 /* Menu */
-#menuBox {
+.menuBox {
     margin: 0 1.5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
 }
 
-#menuNav {
+.menuNav {
     width: 80%;
     margin-left: 0.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
 }
 
 .menuContentBox {
-    margin-left: 0.5rem;
-}
-
-.menuCountent {
-    padding: 1rem;
-    width: 200px;
-    background-color: white;
-    border: solid 1px #979797;
+    margin: 0 2rem;
 }
   
-  
-/* Style the buttons */
-.btn {
+button {
     background-color:#c7c292;
+    border: none;
+    outline: none;
     padding:15px;
     color:#000;
-    display: inline-block;
     text-decoration: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: -0.5px;
     border-radius: 0.3rem;
     margin-right: 1rem;
+    cursor: pointer;
+    font-size: 16px;
 }
   
-.btn:hover {
+button:hover {
     background-color: #d6d1a6;
 }
   
-.btn.active {
+button.active {
     background-color: #807c5e;
     color: white;
 }
 
-.bar-block {
-    margin-bottom: 20px;
+.content {
+    padding: 1rem;
+    width: 200px;
+    background-color: white;
+    border: solid 1px #979797;
+    margin-right: 1.5rem;
+    display: none;
 }
 
-.red{
-    background: red!important;
-    color:#fff!important;
-  }
-
+.content.active {
+    display: block;
+}
 
 
 /* Go to top */

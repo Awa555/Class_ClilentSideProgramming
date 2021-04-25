@@ -78,37 +78,47 @@
         </div>
 
         <!-- Menu --->
-        <div id="menuBox">
-            <div>
-                <h2>Menu options</h2>
+        <div class="menuBox">
+            <h2>Menu options</h2>
+            <div class="menuNav">
+                <button class="tab-button active" data-id="Starters">Starters</button>
+                <button class="tab-button" data-id="Main">Main</button>
+                <button class="tab-button" data-id="Dessert">Dessert</button>
+                <button class="tab-button" data-id="Drinks">Drinks</button>
             </div>
-            <div id="menuNav">
-                <a href="javascript:void(0)" class="bar-item btn active tablink testbtn"
-                    onclick="openClass(event, 'class1')">Starters</a>
-                <a href="javascript:void(0)" class="bar-item btn tablink" onclick="openClass(event, 'class2')">Main</a>
-                <a href="javascript:void(0)" class="bar-item btn tablink"
-                    onclick="openClass(event, 'class3')">Dessert</a>
-                <a href="javascript:void(0)" class="bar-item btn tablink"
-                    onclick="openClass(event, 'class4')">Drinks</a>
-            </div>
-            <div class="menuContentBox">
-                <div class="menuCountent">
-                    <div id="class1" class="content class">
-                        <img src="image/starter-1.png" alt="starter" width="200px">
-                        <p>Sa</p>
-                        <p>39</p>
-                        <p>some text about...</p>
-                    </div>
 
-                    <div id="class2" class="content class">
-                        <img src="image/starter-1.png" alt="starter" width="200px">
-                        <p>fish</p>
-                        <p>49</p>
-                        <p>some text about...</p>
-                    </div>
+            <div class="menuContentBox">
+                <div id="Starters" class="content active">
+                    <img src="image/starter-1.png" alt="starter" width="200px">
+                    <p>Sa</p>
+                    <p>39</p>
+                    <p>some text about...</p>
+                </div>
+
+                <div id="Main" class="content">
+                    <img src="image/starter-1.png" alt="starter" width="200px">
+                    <p>fish</p>
+                    <p>49</p>
+                    <p>some text about...</p>
+                </div>
+
+                <div id="Dessert" class="content">
+                    <img src="image/starter-1.png" alt="starter" width="200px">
+                    <p>fish</p>
+                    <p>59</p>
+                    <p>some text about...</p>
+                </div>
+
+                <div id="Drinks" class="content">
+                    <img src="image/starter-1.png" alt="starter" width="200px">
+                    <p>fish</p>
+                    <p>69</p>
+                    <p>some text about...</p>
                 </div>
             </div>
         </div>
+
+
 
         <!-- Footer --->
         <div id="footer">
