@@ -263,50 +263,71 @@ p{
 /* Menu */
 .menuBox {
     margin: 0 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
 }
 
 .menuNav {
-    width: 80%;
-    margin-left: 0.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1rem;    
+    list-style: none;
+    margin-bottom: 4rem;
+    margin-left: -1.8rem;
 }
 
-.menuContentBox {
-    margin: 0 2rem;
-}
-  
-button {
-    background-color:#c7c292;
-    border: none;
-    outline: none;
-    padding:15px;
-    color:#000;
-    text-decoration: none;
+.menuNav li {
+    float: left;
+    border-radius: 0.3rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: -0.5px;
     border-radius: 0.3rem;
     margin-right: 1rem;
     cursor: pointer;
     font-size: 16px;
+    padding:15px;
+    background-color:#d6d1a6;
+    color: black;
 }
-  
-button:hover {
-    background-color: #d6d1a6;
-}
-  
-button.active {
+
+.menuNav li:hover {
+    cursor: pointer;
     background-color: #807c5e;
+}
+
+.menuNav li.active {
+    background-color:#666662 !important;
+    color: white !important;
+}
+
+.menuNav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    display:block !important;  
     color: white;
 }
 
+.active a {
+    background-color:#666662;
+    color: white;
+}
+
+.menuContentBox {
+    margin: 0 0.7rem;
+}
+
+.menuContent {
+    display: flex;
+}
+  
 .content {
-    padding: 1rem;
+    padding: 0.7rem;
     width: 200px;
     background-color: white;
     border: solid 1px #979797;
     margin-right: 1.5rem;
     display: none;
+    color: black;
 }
 
 .content.active {

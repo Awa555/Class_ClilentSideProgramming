@@ -100,34 +100,51 @@ $(document).ready(function () {
 
 
 // Menu
-const tabs = document.querySelector(".menuNav");
+$(document).ready(function(){
 
-const tabButton = document.querySelectorAll(".tab-button");
+    $(".menuNav li a").click(function(e){
+       e.preventDefault();
+    });
+  
+    $(".menuNav li").click(function(){
+       var tabid = $(this).find("a").attr("href");
+       $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from tab
+  
+       $(".content").hide();   // hiding open tab
+       $(tabid).show();    // show tab
+       $(this).addClass("active"); //  adding active class to clicked tab
+  
+    });
+  
+  });
+// const tabs = document.querySelector(".menuNav");
 
-const contents = document.querySelectorAll(".content");
+// const tabButton = document.querySelectorAll(".tab-button");
 
-tabs.onclick = e => {
+// const contents = document.querySelectorAll(".content");
 
-    const id = e.target.dataset.id;
+// tabs.onclick = e => {
 
-    if (id) {
+//     const id = e.target.dataset.id;
 
-        tabButton.forEach(btn => {
+//     if (id) {
 
-            btn.classList.remove("active");
-        });
+//         tabButton.forEach(btn => {
 
-        e.target.classList.add("active");
+//             btn.classList.remove("active");
+//         });
 
-        contents.forEach(content => {
+//         e.target.classList.add("active");
 
-            content.classList.remove("active");
-        });
+//         contents.forEach(content => {
 
-        const element = document.getElementById(id);
+//             content.classList.remove("active");
+//         });
 
-        element.classList.add("active");
-    }
-}
+//         const element = document.getElementById(id);
+
+//         element.classList.add("active");
+//     }
+// }
 
 
