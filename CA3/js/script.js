@@ -100,51 +100,47 @@ $(document).ready(function () {
 
 
 // Menu
-$(document).ready(function(){
+$(document).ready(function () {
 
-    $(".menuNav li a").click(function(e){
-       e.preventDefault();
+    $(".menuNav li a").click(function (e) {
+
+        e.preventDefault();
     });
-  
-    $(".menuNav li").click(function(){
-       var tabid = $(this).find("a").attr("href");
-       $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from tab
-  
-       $(".content").hide();   // hiding open tab
-       $(tabid).show();    // show tab
-       $(this).addClass("active"); //  adding active class to clicked tab
-  
+
+    $(".menuNav li").click(function () {
+
+        var tabid = $(this).find("a").attr("href");
+        
+        $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from tab
+
+        $(".content").hide();   // hiding open tab
+        
+        $(tabid).show();    // show tab
+        
+        $(this).addClass("active"); //  adding active class to clicked tab
     });
+});
+
+
+
+// Menu Quantity
+function increaseCount(a, b) {
+    var input = b.previousElementSibling;
+    var value = parseInt(input.value, 10);
+    value = isNaN(value) ? 0 : value;
+    value++;
+    input.value = value;
+  }
   
-  });
-// const tabs = document.querySelector(".menuNav");
-
-// const tabButton = document.querySelectorAll(".tab-button");
-
-// const contents = document.querySelectorAll(".content");
-
-// tabs.onclick = e => {
-
-//     const id = e.target.dataset.id;
-
-//     if (id) {
-
-//         tabButton.forEach(btn => {
-
-//             btn.classList.remove("active");
-//         });
-
-//         e.target.classList.add("active");
-
-//         contents.forEach(content => {
-
-//             content.classList.remove("active");
-//         });
-
-//         const element = document.getElementById(id);
-
-//         element.classList.add("active");
-//     }
-// }
+  function decreaseCount(a, b) {
+    var input = b.nextElementSibling;
+    var value = parseInt(input.value, 10);
+    if (value > 1) {
+      value = isNaN(value) ? 0 : value;
+      value--;
+      input.value = value;
+    }
+  }
 
 
+  
