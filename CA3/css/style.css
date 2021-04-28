@@ -260,7 +260,7 @@ p{
 
 
 
-/* Menu */
+/* Menu Navigation */
 .menuBox {
     margin: 0 1.5rem;
     padding-bottom: 3rem;
@@ -312,8 +312,11 @@ p{
     color: white;
 }
 
+
+
+/* Menu Content */
 .menuContentBox {
-    margin: 0 0.7rem;
+    margin: 0 0.7rem 2rem;
 }
 
 .menuContent {
@@ -328,26 +331,60 @@ p{
     margin-right: 1.5rem;
     display: none;
     color: black;
+    position: relative;
 }
 
 .content.active {
     display: block;
 }
 
+.contentImg {
+    margin-bottom: 0.7rem;
+}
+
+.spanName {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+
+.p1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    margin-bottom: 4rem;
+}
+
+.p1Price {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 13px;
+    color: red;
+    font-weight: bold;
+}
+
+.p1V {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    color: red;
+    font-weight: bold;
+}
 
 
 
 
-/* Select quantity */
+
+/* Select Quantity */
 .counter {
-    width: 150px;
-    margin: auto;
+    width: 180px;
+    margin: auto ;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 0;
 }
+
 .counter input {
-    width: 18px;
+    width: 25px;
     border: 0;
     line-height: 10px;
     font-size: 15px;
@@ -357,13 +394,15 @@ p{
     appearance: none;
     outline: 0;
 }
+
 .counter span {
     display: block;
     font-size: 35px;
-    padding: 0 10px;
+    padding: 0 15px;
     cursor: pointer;
     color: #0052cc;
     user-select: none;
+    margin-top: 0.5rem;
 }
 
 

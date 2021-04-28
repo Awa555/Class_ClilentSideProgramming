@@ -12,6 +12,7 @@
     <script src="http://code.jquery.com/jquery-2.2.4.js"></script>
     <!-- My JavaScript -->
     <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
 </head>
 
 <body>
@@ -77,7 +78,7 @@
             </div>
         </div>
 
-        <!-- Menu --->
+        <!-- Menu, Menu Navigation --->
         <div class="menuBox">
             <h2>Menu options</h2>
             <ul class="menuNav">
@@ -85,49 +86,90 @@
                 <li><a href="#2">Main</a></li>
                 <li><a href="#3">Dessert</a></li>
                 <li><a href="#4">Drinks</a></li>
+                <li><a href="#5">Overall Bill</a></li>
             </ul>
 
+            <!-- Menu Content -->
             <div class="menuContentBox">
                 <div class="menuContent">
+
+                    <!-- Starter , 1 -->
                     <div id="1" class="content active">
-                        <img src="image/starter-1.jpg" alt="starter" width="180px">
-                        <span>Spicy Mixed Olives</span>
-                        <p>€4.95</p>
-                        <p>Spicy mixed olives co-starring mushrooms, garlic and red pepper.</p>
+
+                        <img class="contentImg" src="image/starter-1.jpg" alt="starter" width="180px">
+                        <span class="spanName">Spicy Mixed Olives</span>
+                        <p class="p1V">** vegetarian **</p>
+                        <p class="p1Price">€4.95</p>
+                        <p class="p1">Spicy mixed olives co-starring mushrooms, garlic and red pepper.</p>
+
                         <div class="counter">
-                            <span class="down" onClick='decreaseCount(event, this)'><img src="image/down-1.jpg" width="31px" alt="-"></span>
-                            <input type="text" value="0">
-                            <span class="up" onClick='increaseCount(event, this)'><img src="image/up.jpg" width="31px" alt="+"></span>
-                          </div>
+                            <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px"
+                                    alt="-"></span>
+                            <input type="text" value="0" id="quantity">
+                            <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px"
+                                    alt="+"></span>   
+                        </div>
                     </div>
+
+                    <!-- Starter , 2 -->
                     <div id="1" class="content active">
-                        <img src="image/starter-1.jpg" alt="starter" width="180px">
-                        <p>Sa</p>
-                        <p>39</p>
-                        <p>some text about...</p>
-                        
+                        <img class="contentImg" src="image/starter-2.jpg" alt="starter" width="180px">
+                        <span class="spanName">Houmous with PERi-PERi Drizzle</span>
+                        <p class="p1Price">€4.95</p>
+                        <p class="p1">With warm pitta triangles. Great to share.</p>
+                        <div class="counter">
+                            <span class="down" id="del"><img src="image/down-1.jpg" width="31px" alt="-"></span>
+                            <input type="text" value="0" id="quantity">
+                            <span class="up" id="add"><img src="image/up.jpg" width="31px" alt="+"></span>
+                        </div>
                     </div>
-                </div>
 
-                <div id="2" class="content">
-                    <img src="image/starter-1.png" alt="starter" width="200px">
-                    <p>fish</p>
-                    <p>49</p>
-                    <p>some text about...</p>
-                </div>
+                    <!-- Starter , 3 -->
+                    <div id="1" class="content active">
+                        <img class="contentImg" src="image/starter-3.jpg" alt="starter" width="180px">
+                        <span class="spanName">Sweet Potato Wedges with Garlic PERinaise</span>
+                        <p class="p1Price">€4.95</p>
+                        <p class="p1">Crispy wedges served with our creamy plant-based Garlic PERinaise. Perfect for
+                            sharing! </p>
+                        <div class="counter">
+                            <span class="down" id="del"><img src="image/down-1.jpg" width="31px" alt="-"></span>
+                            <input type="text" value="0" id="quantity">
+                            <span class="up" id="add"><img src="image/up.jpg" width="31px" alt="+"></span>
+                        </div>
+                    </div>
 
-                <div id="3" class="content">
-                    <img src="image/starter-1.png" alt="starter" width="200px">
-                    <p>fish</p>
-                    <p>59</p>
-                    <p>some text about...</p>
-                </div>
+                    <!-- Main -->
+                    <div id="2" class="content">
+                        <img src="image/starter-1.png" alt="starter" width="200px">
+                        <p>fish</p>
+                        <p>49</p>
+                        <p>some text about...</p>
+                    </div>
 
-                <div id="4" class="content">
-                    <img src="image/starter-1.png" alt="starter" width="200px">
-                    <p>fish</p>
-                    <p>69</p>
-                    <p>some text about...</p>
+                    <!-- Dessert -->
+                    <div id="3" class="content">
+                        <img src="image/starter-1.png" alt="starter" width="200px">
+                        <p>fish</p>
+                        <p>59</p>
+                        <p>some text about...</p>
+                    </div>
+
+                    <!-- Drinks -->
+                    <div id="4" class="content">
+                        <img src="image/starter-1.png" alt="starter" width="200px">
+                        <p>fish</p>
+                        <p>69</p>
+                        <p>some text about...</p>
+                    </div>
+
+                    <!-- Bill -->
+                    <div id="5" class="content">
+                        <p id="billBox">
+                            The total amount of: <label id="total"></label>
+                        </p>
+                        <input type="hidden" value="" id="price">
+                    </div>
+
                 </div>
             </div>
         </div>

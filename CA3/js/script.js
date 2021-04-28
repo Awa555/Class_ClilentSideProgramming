@@ -1,4 +1,4 @@
-// Staff Password
+/* Staff Password */
 function validate() {
     // access the value inside the textbox
     var staffPassword = document.getElementById('StaffPW').value;
@@ -22,7 +22,7 @@ function validate() {
 
 
 
-// Customers Information Button
+/* Customers Information Button */
 $(document).ready(function () {
 
     $("#btHide").click(function () {
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
 
 
-// Customers
+/* Customers */
 $(document).ready(function () {
 
     var url = "https://randomuser.me/api/?results=5";
@@ -75,7 +75,7 @@ $(document).ready(function () {
 
 
 
-// Go to top
+/* Go to top */
 $(document).ready(function () {
 
     $("#back-to-top").hide();
@@ -99,7 +99,7 @@ $(document).ready(function () {
 
 
 
-// Menu
+/* Menu Navigation */
 $(document).ready(function () {
 
     $(".menuNav li a").click(function (e) {
@@ -110,37 +110,16 @@ $(document).ready(function () {
     $(".menuNav li").click(function () {
 
         var tabid = $(this).find("a").attr("href");
-        
+
         $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from tab
 
         $(".content").hide();   // hiding open tab
-        
+
         $(tabid).show();    // show tab
-        
+
         $(this).addClass("active"); //  adding active class to clicked tab
     });
 });
 
 
 
-// Menu Quantity
-function increaseCount(a, b) {
-    var input = b.previousElementSibling;
-    var value = parseInt(input.value, 10);
-    value = isNaN(value) ? 0 : value;
-    value++;
-    input.value = value;
-  }
-  
-  function decreaseCount(a, b) {
-    var input = b.nextElementSibling;
-    var value = parseInt(input.value, 10);
-    if (value > 1) {
-      value = isNaN(value) ? 0 : value;
-      value--;
-      input.value = value;
-    }
-  }
-
-
-  
