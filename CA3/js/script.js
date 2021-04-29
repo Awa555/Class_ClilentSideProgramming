@@ -109,15 +109,15 @@ $(document).ready(function () {
 
     $(".menuNav li").click(function () {
 
-        var tabid = $(this).find("a").attr("href");
+        var divid = $(this).find("a").attr("href");
 
-        $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from tab
+        $(".menuNav li,.menuBox div.content").removeClass("active");   // removing active class from div
 
-        $(".content").hide();   // hiding open tab
+        $(".content").hide();   // hiding open div
 
-        $(tabid).show();    // show tab
+        $(divid).show();    // show div
 
-        $(this).addClass("active"); //  adding active class to clicked tab
+        $(this).addClass("active"); //  adding active class to clicked div
     });
 });
 

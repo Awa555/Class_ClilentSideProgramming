@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 5px;
+            height: 50px;
+        }
+
+        table {
+            width: 400px;
+        }
+
+        th {
+            background-color: rgb(89, 89, 187);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Parctice:
+     1. table > tr*2 td*3
+     2. table > tr*3 td*3
+     3. table > tr*3 td*2
+    
+    -->
+    <h1>Exercie 1</h1>
+    
+
+    <table>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Item A</td>
+            <td><input type="text" value="0" name="qnt_1" id="qnt_1" data-price="100" size="4"></td>
+            <td>€100</td>
+        </tr>
+        <tr>
+            <td>Item B</td>
+            <td><input type="text" value="0" name="qnt_2" id="qnt_2" data-price="50" size="4"></td>
+            <td>€50</td>
+        </tr>
+        <tr>
+            <td>Item C</td>
+            <td><input type="text" value="0" name="qnt_3" id="qnt_3" data-price="50" size="4"></td>
+            <td>€50</td>
+        </tr>
+        <tr>
+            <td>Item D</td>
+            <td><input type="text" value="0" name="qnt_4" id="qnt_4" data-price="24" size="4"></td>
+            <td>€24</td>
+        </tr>
+        <tr>
+            <td class="total">&nbsp;</td>
+            <td class="total"><strong>Total:</strong></td>
+            <td class="total"><strong>
+                <div id="ItemsTotal">€0</div></strong>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var total_items = 4;
+
+        function CalculateItemsValue() {
+            var total = 0;
+            
+            for (let i = 1; i <= total_items; i++) {
+                itemID = document.getElementById("qnt_" + i);
+                total = total + parseInt(itemID.value) * parseInt(itemID.getAttribute("data-price"));
+                
+            }
+            document.getElementById('ItemsTotal').innerHTML = "€" + total;
+        }
+
+        document.querySelectorAll('[id^="qnt_"]').forEach(item => {
+            item.addEventListener('keyup', CalculateItemsValue);
+        });
+
+    </script>
+
+</body>
+</html>
