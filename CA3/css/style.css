@@ -16,7 +16,7 @@ body {
 
 
 
-/* Top Navigation Bar */
+/* -- Top Navigation Bar -- */
 .nvaBar {
     background-color: #fefbee;
     padding: 0em 0.8em 0em 1.6em;
@@ -82,7 +82,7 @@ h2 {
 
 
 
-/* Banner */
+/* -- Banner -- */
 .banner {
     background-image: url(../image/img02.jpg);
     background-repeat: repeat-x;
@@ -97,7 +97,7 @@ h2 {
     height: 201px;
 }
 
-.bannerH2 {
+.banner h2 {
     color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px rgb(0, 0, 0);
@@ -109,7 +109,7 @@ h2 {
 
 
 
-/* StaffPassword Box */
+/* -- StaffPassword Box -- */
 .staffBox {
     position: relative;
     margin: 2rem 0;
@@ -174,7 +174,7 @@ input:hover[type="submit"] {
 
 
 
-/* Customer */
+/* -- Customer -- */
 .userBox {
     position: relative;
     padding: 1rem 0 0 0.5em;
@@ -240,7 +240,7 @@ p{
 
 
 
-/* Footer */
+/* -- Footer -- */
 #footer {
     position: absolute;
     background-color: #807c5e;
@@ -259,7 +259,7 @@ p{
 
 
 
-/* Menu Navigation */
+/* -- Menu Navigation -- */
 .menuBox {
     margin: 0 1.5rem;
     padding-bottom: 3rem;
@@ -302,7 +302,6 @@ p{
 }
 
 .active{
-    /* display:block !important;   */
     color: white;
 }
 
@@ -324,14 +323,14 @@ p{
 }
   
 .content {   
-    /* display: none;     */
+    display: none;    
     position: relative;
     margin-bottom: 2rem;
 }
 
-/* .content.active {
+.content.active {
     display: block;
-} */
+}
 
 .content ul {
     display: flex;

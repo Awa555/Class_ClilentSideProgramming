@@ -89,7 +89,7 @@ function setItems(prodcut) {
 
 
 /* Total Cost */
-function totalCost(products) {
+function totalCost(product) {
   let cartCost = localStorage.getItem('totalCost'); 
 
   if(cartCost != null) {
@@ -98,7 +98,7 @@ function totalCost(products) {
   }
 
   else {
-    localStorage.setItem("totalCost", products.prict);
+    localStorage.setItem("totalCost", product.prict);
   }
 }
 
