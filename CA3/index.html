@@ -87,7 +87,7 @@
                 <li><a href="#2">Main</a></li>
                 <li><a href="#3">Dessert</a></li>
                 <li><a href="#4">Drinks</a></li>
-                <li><a href="#5">Overall Bill</a></li>
+                <li class="cart"><a href="#5">Overall Bill <span>(0)</span></a></li>                   
             </ul>
 
             <!-- Menu Content -->
@@ -101,13 +101,15 @@
                                 <img class="contentImg" src="image/starter-1.jpg" alt="starter" width="180px">
                                 <span class="spanName">Spicy Mixed Olives</span>
                                 <p class="p1V">** vegetarian **</p>
-                                <p class="p1Price" id="price">€4.95</p>
+                                <p class="p1Price">€4.95</p>
                                 <p class="p1">Spicy mixed olives co-starring mushrooms, garlic and red pepper.</p>
 
                                 <div class="counter">
-                                    <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
-                                    <input type="text" value="0" id="quantity" data-price="4.95">
-                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span>
+                                    <a class="add-cart" href="#">ADD</a>
+                                    <!-- <input type="button" value="ADD" onclick="add_shoppingcar(this)"> -->
+                                    <!-- <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
+                                    <input type="text" value="0" id="quantity">
+                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span> -->
                                 </div>
                             </li>
 
@@ -120,9 +122,10 @@
                                 <p class="p1">With warm pitta triangles. Great to share.</p>
 
                                 <div class="counter">
-                                    <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
+                                    <a class="add-cart cart2" href="#">ADD</a>
+                                    <!-- <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
                                     <input type="text" value="0" id="quantity" data-price="4.95">
-                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span>
+                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span> -->
                                 </div>
                             </li>
 
@@ -134,9 +137,10 @@
                                 <p class="p1">Crispy wedges served with our creamy plant-based Garlic PERinaise. Perfect for sharing! </p>
                                 
                                 <div class="counter">
-                                    <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
+                                    <a class="add-cart cart3" href="#">ADD</a>
+                                    <!-- <span id="down" onclick="setQuantity('down');"><img src="image/down-1.jpg" width="31px" alt="-"></span>
                                     <input type="text" value="0" id="quantity" data-price="4.95">
-                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span>
+                                    <span id="up" onclick="setQuantity('up');"><img src="image/up.jpg" width="31px" alt="+"></span> -->
                                 </div>
                             </li>
                         </ul>                    
@@ -172,15 +176,20 @@
 
                     <!-- Bill -->
                     <div id="5" class="content">
-                        <table>
-                            <tr>
-                                <td class="total"><strong>Total:</strong></td>
-                                <td class="total"><strong>
-                                        <div id="ItemsTotal">€0</div>
-                                    </strong>
-                                </td>
-                            </tr>
-                        </table>
+                        <!-- <div class="totalPrice"><strong>Total: €</strong></div> -->
+
+                        <div class="prodcut-container">
+                            <div class="prodcut-header">
+                                <h5 class="product-title">Product</h5>
+                                <h5 class="price">Price</h5>
+                                <h5 class="quantity">Quantity</h5>
+                                <h5 class="total">Total</h5>
+                            </div>
+                            <div class="prodcut">
+
+                            </div>
+                        </div>
+                        
                     </div>
 
                 </div>
