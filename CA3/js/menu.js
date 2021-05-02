@@ -35,6 +35,7 @@ for(let i = 0; i < carts.length; i++){
 }
 
 
+// show how many item on Bill button
 function onLoadCartNumbers() {
   let prodcutNumbers = localStorage.getItem('cartNumbers');
 
