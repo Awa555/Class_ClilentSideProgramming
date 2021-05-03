@@ -426,68 +426,100 @@ p{
 
 
 /* -- Cart Bill -- */
-.prodcut-container {
-    width: 500px;
+.products-container {
+    width: 600px;
     justify-content: space-around;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
-.prodcut-header {
+.product-header {
     display: flex;
     justify-content: flex-start;
-    border-bottom: 4px solid gray;
-    width: 100%;
-    border-bottom: 1px solid lightgray;
+    background-color: #979797;
 }
+
+.product-header p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;    
+}
+
 
 .product-title {
-    width: 45%;
-    border-bottom: 1px solid lightgray;
+    width: 56%;
+    padding-left: 1rem;
 }
 
-.price {
+.product-another {
     width: 15%;
-    display: flex;
+    text-align: center;
+}
+
+
+/* .price {
+    width: 14%;
     align-items: center;
-    border-bottom: 1px solid lightgray;
+    text-align: center;
 }
 
 .quantity {
-    width: 15%;
-    border-bottom: 1px solid lightgray;
+    width: 14%;
     align-items: center;
-    display: flex;
-}
-
-.total {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
+    text-align: center;
 }
 
 .product {
-    width: 45%;
-    display: flex;
-    align-items: center;
+    width: 53%;
     justify-content: space-around;
+    float: left;
+} */
+
+.productList {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0;
     border-bottom: 1px solid lightgray;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
 }
 
-.baseetTotalcontainer {
+.productList-title {
+    width: 56%;
+}
+
+.productList-another {
+    width: 15%;
+    text-align: center;
+}
+
+.totalAll {
+    display: flex;
+    margin: 1rem 1.7rem 0 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    float: right;
+    font-weight: bolder;
+}
+
+.totalAll strong {
+    padding-left: 1rem;
+    color: red;
+}
+
+/* .basketTotalContainer {
     display: flex;
     justify-content: flex-end;
     width: 100%;
     padding: 10px 0;
 }
 
-.baseetTotalTitle {
+.basketTotalTitle {
     width: 30%;
 }
 
-.baseetTotal {
+.basketTotal {
     width: 10%;
-} 
+}  */
 
 
 
