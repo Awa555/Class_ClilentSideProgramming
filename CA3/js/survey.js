@@ -5,10 +5,10 @@ function printError(elemId, hintMsg) {
 // Defining a function to validate form 
 function validateForm() {
     // Retrieving the values of form elements 
-    var name = document.contactForm.name.value;
-    var email = document.contactForm.email.value;
-    var mobile = document.contactForm.mobile.value;
-    var gender = document.contactForm.gender.value;
+    var name = document.surveyForm.name.value;
+    var email = document.surveyForm.email.value;
+    var mobile = document.surveyForm.mobile.value;
+    var gender = document.surveyForm.gender.value;
 
     var accuracyOrder = [];
     var checkboxes = document.getElementsByName("accuracyOrder[]");
@@ -140,8 +140,8 @@ function validateForm() {
     } else {
         // Creating a string from input data for preview
         var dataPreview = "You've entered the following details: \n" +
-                          "Full Name: " + name + "\n" +
-                          "Email Address: " + email + "\n" +
+                          "Name: " + name + "\n" +
+                          "Email: " + email + "\n" +
                           "Mobile Number: " + mobile + "\n" +
                           "Gender: " + gender + "\n";
         if(accuracyOrder.length) {
@@ -181,6 +181,8 @@ function validateForm() {
         }
 
         // Display input data in a dialog box before submitting the form
-        alert(dataPreview);
+        //alert(dataPreview);
+        alert('Form Succesfully Submitted! Thank you for filling out this survey. Your opinion helps us server you better.');
+
     }
 };

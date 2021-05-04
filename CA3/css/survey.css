@@ -46,3 +46,36 @@
 
 
 /* -- Form --*/
+.formBox {
+    margin: 1.3rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;  
+}
+
+.row {
+    margin-left: 2rem;
+    padding-bottom: 1.8rem;
+    font-size: 14px;
+    line-height: 2.5rem;
+}
+
+.form-inline {
+    line-height: 1rem;
+}
+.form-inline label {
+    padding-right: 2rem;
+    margin-left: 1.5rem;
+}
+
+/* .userInfo {
+    padding-top: 2rem;
+   
+}
+
+.userInfo input {
+    margin-right: 5rem;
+} */ 
+
+.form-inline textarea {
+    width: 450px;
+    height: 120px;
+}
