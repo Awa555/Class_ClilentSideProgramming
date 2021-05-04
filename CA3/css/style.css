@@ -254,18 +254,34 @@ input:hover[type="submit"] {
 #footer {
     position: absolute;
     background-color: #807c5e;
-    height: 40px;
+    height: 70px;
     width: 100%;
     box-sizing: border-box;
     bottom: 0;
 }
 
-#footerP {
+#footer ul {
+    margin-top: 0.4rem;
+}
+
+#footer ul li {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     transform: scale(1,0.9);
     color: white;
     text-align: center;
+    line-height: 1.3rem;
+    font-size: 12px;
+    list-style: none;
 }
+
+#footer ul li a {
+    color: white;
+}
+
+#footer ul li a:hover {
+    color: black;
+}
+
 
 
 
@@ -335,7 +351,7 @@ input:hover[type="submit"] {
 .content {   
     display: none;    
     position: relative;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .content.active {

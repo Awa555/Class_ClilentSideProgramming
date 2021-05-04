@@ -1,225 +1,155 @@
 
-// let carts = document.querySelectorAll('.add-cart'); // select all cart
+var product = {
+  "01": {
+    name = "Spicy Mixed Olives",
+    counter = 0,
+    price = 4.95
+  },
 
-// let products = [
-//   {
-//     name: "Spicy",
-//     price: "4.95",
-//     tag: "starter",
-//     kind: "vegetarian",
-//     inCart: 0
-//   },
-//   {
-//     name: "Houmous with PERi-PERi Drizzle",
-//     price: "4.95",
-//     tag: "starter",
-//     kind: "",
-//     inCart: 0
-//   },
-//   {
-//     name: "Sweet Potato Wedges with Garlic PERinaise",
-//     price: "4.95",
-//     tag: "starter",
-//     kind: "",
-//     inCart: 0
-//   },
-// ];
+  "02": {
+    name = "Houmous with PERi-PERi Drizzle",
+    counter = 0,
+    price = 4.95
+  },
+
+  "03": {
+    name = "Sweet Potato Wedges with Garlic PERinaise",
+    counter = 0,
+    price = 4.95
+  },
+
+  "04": {
+    name = "The Great Imitator Wrap",
+    ounter = 0,
+    price = 8.95
+  },
+
+  "05": {
+    name = "Chicken Butterfly",
+    counter = 0,
+    price = 11.25
+  },
+
+  "06": {
+    name = "Double Chicken Burger",
+    counter = 0,
+    price = 13.40
+  },
+
+  "07": {
+    name = "Gooey Caramel Cheesecake",
+    counter = 0,
+    price = 6.20
+  },
+
+  "08": {
+    name = "Choc-A-Lot Cake",
+    counter = 0,
+    price = 6.20
+  },
+
+  "09": {
+    name = "Carrot Cake",
+    counter = 0,
+    price = 6.20
+  },
+
+  "10": {
+    name = "Coca-Cola Classic 330ml",
+    counter = 0,
+    price = 2.20
+  },
+
+  "11": {
+    name = "Karma Drinks Gingerella 300ml",
+    counter = 0,
+    price = 4.00
+  },
 
 
-
-// for(let i = 0; i < carts.length; i++){ 
-//   carts[i].addEventListener('click', () => {  
-//     cartNumbers(products[i]); 
-//     totalCost(products[i]);
-//   })
-// }
-
-
-// // check localStorage item save
-// function onLoadCartNumbers() {
-//   let productNumbers = localStorage.getItem('cartNumbers');
-
-//   if(productNumbers) {
-//     document.querySelector('.cart span').textContent = productNumbers;
-//   }
-// }
-
-
-// // show how many item on Bill button
-// function cartNumbers(product) {
-
-//   let productNumbers = localStorage.getItem('cartNumbers');
-
-//   productNumbers = parseInt(productNumbers); ////String to number
-
-//   if(productNumbers) {
-//     localStorage.setItem('cartNumbers', productNumbers + 1);
-//     document.querySelector('.cart span').textContent = productNumbers +1;
-//   }
-
-//   else {
-//     localStorage.setItem('cartNumbers', 1);
-//     document.querySelector('.cart span').textContent = 1;
-//   } 
-
-//   setItems(product);
-// }
-
-
-// function setItems(product) {
-//   let cartItems = localStorage.getItem('productsInCart');
-//   cartItems = JSON.parse(cartItems);
-
-//   if(cartItems != null) {
-
-//     if(cartItems[product.tag] == underfined) {
-//       cartItems = {
-//         ...cartItems,
-//         [product.tag]: product
-//       }
-//     }
-//     cartItems[product.tag].inCart += 1; 
-//   }
-
-//   else {
-//     product.inCart = 1;
-//     cartItems = {
-//       [product.tag]: product
-//     }
-//   }
-//   localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-// }
+  "12": {
+    name = "Kids Cawston Press Summer Berry 200ml",
+    counter = 0,
+    price = 2.10
+  },
+}
 
 
 
-// /* Total Cost */
-// function totalCost(product) {
-//   let cartCost = localStorage.getItem('totalCost'); 
-
-//   console.log(cartCost);
-//   console.log(typeof cartCost);
-
-//   if(cartCost != null) {
-//     cartCost = parseInt(cartCost); //String to number
-//     localStorage.setItem("totalCost", cartCost + product.price);
-//   }
-
-//   else {
-//     localStorage.setItem("totalCost", product.price);
-//   }
-// }
+var addBtn = document.getElementById("btn");
+// var addBtn2 = document.getElementById("btn2");
+// var addBtn3 = document.getElementById("btn3");
 
 
-// /* Display Cart */
-// function displayCart() {
-//   let cartItems = localStorage.getItem("productsInCart");
-//   cartItems = JSON.parse(cartItems);
-//   let productContainer = document.querySelector(".products");
-//   let cartCost = localStorage.getItem('totalCost'); 
-
-//   console.log(cartItems);
-//   if(cartItems && productContainer) {
-//     productContainer.innerHTML = '';
-//     Object.values(cartItems).map(item => {
-//       productContainer.innerHTML += `
-//       <div class= "product">
-//       <img src="./image/cancel.jpg" width:"30px">
-//       <img src="./image/${item.tag}.jpg">
-//       <span>${item.name}</span>
-//       </div>
-
-//       <div class="price">€${item.price}</div>
-//       <div class="quantity">
-//       <img src="./image/del.jpg" width:"30px">
-//       <span>${item.inCart}</span>
-//       <img src="./image/add.jpg" width:"30px">
-//       </div>
-
-//       <div class="total">
-//         €${item.inCart * item.price}
-//       </div>
-//       `;
-//     });
-
-//     productContainer.innerHTML += `
-//     <div class="basketTotalContainer">
-//       <h4 class="basketTotalTitle">
-//       Basket Total
-//       </h4>
-//       <h4 class="basketTotal">
-//       €${cartCost}
-//       </h4>
-//     </div>
-//     `;
-//   }
-// }
-
-// onLoadCartNumbers();
-// displayCart();
-
-
-
-
-var starter1 = "Spicy Mixed Olives";
-var counter = 0;
-var price = 4.95;
-
-var starter2 = "Houmous with PERi-PERi Drizzle";
-var counter = 0;
-var price = 4.95;
-
-var addBtn1 = document.getElementById("btn1");
-var addBtn2 = document.getElementById("btn2");
 
 var bill = document.getElementsByClassName("bill");
 var temp;
 var total = 0;
 
-// let addBtn = document.querySelectorAll('btn');
+
+
+var addBtn = document.querySelectorAll('[id^="btn"]');
 
 // for (let i = 0; i < addBtn.length; i++) {
 
-  addBtn1 + addBtn2.addEventListener("click", function () {
-    counter += 1;
-    temp = `
+
+var product = JSON.parse(localStorage.getItem("product"));
+
+
+getItem(product);
+
+// function getProduct(product) {
+//    fetch(product)
+// //     .then((response) => (response.json()))
+//      .then(function (data) {
+//        console.log(data);
+
+//        data.forEach(item => {
+
+
+
+addBtn.on("click", function () {
+  //for (let i = 0; i <= addBtn.length; i++) {
+
+  counter += 1;
+  temp = `
     <div class= "productList">
-      <div class= "productList-title">${starter1}</div> 
-      <div class= "productList-another">€${price}</div>
-      <div class= "productList-another">${counter}</div>
-      <div class= "productList-another">€${(counter * price).toFixed(2)}</div>
+      <div class= "productList-title">${product.name}</div> 
+      <div class= "productList-another">€${product.price}</div>
+      <div class= "productList-another">${product.counter}</div>
+      <div class= "productList-another">€${(product.counter * product.price).toFixed(2)}</div>
     </div>
 
-    <div class= "productList">
-      <div class= "productList-title">${starter2}</div> 
-      <div class= "productList-another">€${price}</div>
-      <div class= "productList-another">${counter}</div>
-      <div class= "productList-another">€${(counter * price).toFixed(2)}</div>
-    </div>
     <div class= "total">
-    Total Price: <strong>€${total = total + (counter * price)}</strong>
+    Total Price: <strong>€${total = total + (product.counter * product.price)}</strong>
     </div>
-    `
+    `;
+  //}
+  bill[0].innerHTML = temp;
 
-    bill[0].innerHTML = temp
-  });
-//}
 
-var total_items = 2;
+
+})
+//     });
+//    });   
+//  }
+
+var total_items = 12;
 
 function CalculateItemsValue() {
 
   var total = 0;
 
   for (let i = 1; i <= total_items; i++) {
-    itemID = document.getElementById("btn1" + i);
-    itemID = document.getElementById("btn2" + i);
-    total = total + (counter * price);
+    itemID = document.getElementById("btn" + i);
+    //itemID = document.getElementById("btn2" + i);
+    total = total + (product.counter * product.price);
   }
 
   document.getElementById('ItemsTotal').innerHTML = "€" + total;
 };
 
-document.querySelectorAll('[id^="btn1"]' + '[id^="btn2"]').forEach(item => {
+document.querySelectorAll('[id^="btn"]').forEach(item => {
   item.addEventListener(CalculateItemsValue);
 
   console.log(total);

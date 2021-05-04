@@ -58,7 +58,7 @@ $(document).ready(function () {
 
                     <span>${user.name.title + '. ' + user.name.fitst + ' ' + user.name.last}</span>
                     <p>${'DOB: ' + user.dob.date}</p>
-                    <p>${'Gender: ' + '  /  Age: ' + user.dob.age}</p>
+                    <p>${'Gender: ' + user.gender + ' / Age: ' + user.dob.age}</p>
                     <p>${'Phone: ' + user.phone + ' / ' + user.cell}</p>
                     <p>${'Email: ' + user.email}</p>
                     <p>${'PostCode: ' + user.location.postcode}</p>
