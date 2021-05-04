@@ -160,53 +160,49 @@
 
 
 
-var starter1 = "Spicy Mixed Olives"
-var counter = 0
-var price = 4.95
+var starter1 = "Spicy Mixed Olives";
+var counter = 0;
+var price = 4.95;
 
-var starter2 = "Houmous with PERi-PERi Drizzle"
-var counter = 0
-var price = 4.95
+var starter2 = "Houmous with PERi-PERi Drizzle";
+var counter = 0;
+var price = 4.95;
 
-var addBtn1 = document.getElementById("btn1")
-var addBtn2 = document.getElementById("btn2")
+var addBtn1 = document.getElementById("btn1");
+var addBtn2 = document.getElementById("btn2");
 
-var bill = document.getElementsByClassName("bill")
-var temp
+var bill = document.getElementsByClassName("bill");
+var temp;
 var total = 0;
 
-addBtn1 + addBtn2.addEventListener("click", function () {
-  counter += 1
-  temp = `
+// let addBtn = document.querySelectorAll('btn');
+
+// for (let i = 0; i < addBtn.length; i++) {
+
+  addBtn1 + addBtn2.addEventListener("click", function () {
+    counter += 1;
+    temp = `
     <div class= "productList">
-    <div class= "productList-title">${starter1}</div> 
-    <div class= "productList-another">€${price}</div>
-    <div class= "productList-another">
- 
-    ${counter}
-
-    </div>
-    <div class= "productList-another">€${counter * price}</div>
+      <div class= "productList-title">${starter1}</div> 
+      <div class= "productList-another">€${price}</div>
+      <div class= "productList-another">${counter}</div>
+      <div class= "productList-another">€${(counter * price).toFixed(2)}</div>
     </div>
 
     <div class= "productList">
-    <div class= "productList-title">${starter2}</div> 
-    <div class= "productList-another">€${price}</div>
-    <div class= "productList-another">${counter}</div>
-    <div class= "productList-another">€${counter * price}</div>
-
-    
+      <div class= "productList-title">${starter2}</div> 
+      <div class= "productList-another">€${price}</div>
+      <div class= "productList-another">${counter}</div>
+      <div class= "productList-another">€${(counter * price).toFixed(2)}</div>
     </div>
-    <div class="totalAll">
-    Total Price: <div>€${total = total +(counter * price)}</div>
+    <div class= "total">
+    Total Price: <strong>€${total = total + (counter * price)}</strong>
     </div>
     `
 
-  bill[0].innerHTML = temp
-});
-
-
-
+    bill[0].innerHTML = temp
+  });
+//}
 
 var total_items = 2;
 
@@ -217,18 +213,18 @@ function CalculateItemsValue() {
   for (let i = 1; i <= total_items; i++) {
     itemID = document.getElementById("btn1" + i);
     itemID = document.getElementById("btn2" + i);
-    total.toFixed(2) = total + (itemID.counter * itemID.price);
+    total = total + (counter * price);
   }
-  
-  document.getElementById('ItemsTotal').innerHTML = "€" + total.toFixed(2);
+
+  document.getElementById('ItemsTotal').innerHTML = "€" + total;
 };
 
 document.querySelectorAll('[id^="btn1"]' + '[id^="btn2"]').forEach(item => {
   item.addEventListener(CalculateItemsValue);
 
-  console.log(total.toFixed(2));
+  console.log(total);
 });
 
-console.log(temp)
+console.log(temp);
 
 CalculateItemsValue();

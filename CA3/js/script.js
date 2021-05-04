@@ -52,9 +52,9 @@ $(document).ready(function () {
 
                 data.results.forEach(user => {
 
-                    u = `<div class ="well">
+                    u = `<div class ="eachUser">
 
-                    <img src = "${user.picture.thumbnail}"><br>
+                    <img src = "${user.picture.thumbnail}" class= "user-photo"><br>
 
                     <span>${user.name.title + '. ' + user.name.fitst + ' ' + user.name.last}</span>
                     <p>${'DOB: ' + user.dob.date}</p>

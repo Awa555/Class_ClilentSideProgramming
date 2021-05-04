@@ -66,13 +66,11 @@
 
         <!-- Customer Information --->
         <div class="userBox">
-            <a href="#" class="userA" id="btHide" title="Customers Information">Customers Information</a>
+            <a href="#" id="btHide" title="Customers Information">Customers Information</a>
             <div class="profileBox">
                 <div id="hide" class="profile-out" style="display: none">
                     <div class="profile-in">
-                        <div class="profile">
-                            <h3 id="results"></h3>
-                        </div>
+                        <div class="profile" id="results"></div>
                     </div>
                 </div>
             </div>
@@ -86,7 +84,7 @@
                 <li><a href="#2">Main</a></li>
                 <li><a href="#3">Dessert</a></li>
                 <li><a href="#4">Drinks</a></li>
-                <li class="cart"><a href="#5">Overall Bill</a></li>                   
+                <li class="cart"><a href="#5">Overall Bill</a></li>
             </ul>
 
             <!-- Menu Content -->
@@ -126,41 +124,137 @@
                                 <img class="contentImg" src="image/starter-3.jpg" alt="starter" width="180px">
                                 <span class="spanName">Sweet Potato Wedges with Garlic PERinaise</span>
                                 <p class="p1Price">€4.95</p>
-                                <p class="p1">Crispy wedges served with our creamy plant-based Garlic PERinaise. Perfect for sharing! </p>
-                                
+                                <p class="p1">Crispy wedges served with our creamy plant-based Garlic PERinaise. Perfect
+                                    for sharing! </p>
+
                                 <div class="counter">
-                                    <a class="add-cart" href="##">ADD</a>
+                                    <a class="add-cart" id="btn3" href="##">ADD</a>
                                 </div>
                             </li>
-                        </ul>                    
+                        </ul>
                     </div>
-                    
+
                     <!-- Main -->
                     <div id="2" class="content">
                         <ul>
                             <li>
-                                <img src="image/starter-1.png" alt="starter" width="200px">
-                                <p>fish</p>
-                                <p>49</p>
-                                <p>some text about...</p>
+                                <!-- Main , 1 -->
+                                <img class="contentImg" src="image/main-1.jpg" alt="main" width="180px">
+                                <span class="spanName">The Great Imitator Wrap</span>
+                                <p class="p1V">** vegetarian **</p>
+                                <p class="p1Price">€8.95</p>
+                                <p class="p1">Served with plant-based Garlic PERinaise, lettuce and chilli jam.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn4" href="##" value="0" data-price="8.95">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Main , 2 -->
+                                <img class="contentImg" src="image/main-2.jpg" alt="main" width="180px">
+                                <span class="spanName">Chicken Butterfly</span>
+                                <p class="p1Price">€11.25</p>
+                                <p class="p1">Two chicken breasts, flame-grilled with crispy skin. Infused with
+                                    PERi-PERi and served in your choice of spice.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn5" href="##" value="0" data-price="11.25">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Main , 3 -->
+                                <img class="contentImg" src="image/main-3.jpg" alt="main" width="180px">
+                                <span class="spanName">Double Chicken Burger</span>
+                                <p class="p1Price">€13.40</p>
+                                <p class="p1">Two chicken breasts infused with PERi-PERi and grilled to your favourite
+                                    spice. Served in a Portuguese Roll with lettuce, mayo and tomato.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn6" href="##" value="0" data-price="13.40">ADD</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Dessert -->
                     <div id="3" class="content">
-                        <img src="image/starter-1.png" alt="starter" width="200px">
-                        <p>fish</p>
-                        <p>59</p>
-                        <p>some text about...</p>
+                        <ul>
+                            <li>
+                                <!-- Dessert , 1 -->
+                                <img class="contentImg" src="image/dessert-1.jpg" alt="main" width="180px">
+                                <span class="spanName">Gooey Caramel Cheesecake</span>
+                                <p class="p1Price">€6.20</p>
+                                <p class="p1">Rich and creamy caramel cheesecake on a crumbly biscuit base.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn7" href="##" value="0" data-price="6.20">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Dessert , 2 -->
+                                <img class="contentImg" src="image/dessert-2.jpg" alt="main" width="180px">
+                                <span class="spanName">Choc-A-Lot Cake</span>
+                                <p class="p1Price">€6.20</p>
+                                <p class="p1">Rich and indulgent chocolate between moist chocolate sponge drenched in rich chocolate.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn8" href="##" value="0" data-price="6.20">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Dessert , 3 -->
+                                <img class="contentImg" src="image/dessert-3.jpg" alt="main" width="180px">
+                                <span class="spanName">Carrot Cake</span>
+                                <p class="p1Price">€6.20</p>
+                                <p class="p1">Rich and fluffy with walnuts, raisins and pineapple, topped with cream cheese icing.</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn9" href="##" value="0" data-price="6.20">ADD</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- Drinks -->
                     <div id="4" class="content">
-                        <img src="image/starter-1.png" alt="starter" width="200px">
-                        <p>fish</p>
-                        <p>69</p>
-                        <p>some text about...</p>
+                        <ul>
+                            <li>
+                                <!-- Drinks , 1 -->
+                                <img class="contentImg" src="image/drinks-1.jpg" alt="main" width="180px">
+                                <span class="spanName">Coca-Cola Classic 330ml</span>
+                                <p class="p1Price">€2.20</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn10" href="##" value="0" data-price="2.20">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Drinks , 2 -->
+                                <img class="contentImg" src="image/drinks-2.jpg" alt="main" width="180px">
+                                <span class="spanName">Karma Drinks Gingerella 300ml</span>
+                                <p class="p1Price">€4.00</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn11" href="##" value="0" data-price="4.00">ADD</a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <!-- Drinks , 3 -->
+                                <img class="contentImg" src="image/drinks-3.jpg" alt="main" width="180px">
+                                <span class="spanName">Kids Cawston Press Summer Berry 200ml</span>
+                                <p class="p1Price">€2.10</p>
+
+                                <div class="counter">
+                                    <a class="add-cart" id="btn12" href="##" value="0" data-price="2.10">ADD</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- Bill -->
@@ -173,9 +267,11 @@
                                 <p class="product-another">Total</p>
                             </div>
                             <div class="bill"></div>
-                        </div>    
-                        
+                            <div></div>
+                        </div>
+
                     </div>
+
                 </div>
             </div>
         </div>

@@ -180,7 +180,7 @@ input:hover[type="submit"] {
     padding: 1rem 0 0 0.5em;
 }
 
-.userA {
+.userBox a {
     background-color: #df613a;
     color: white;
     padding: 0.8em 1.2em;
@@ -193,50 +193,60 @@ input:hover[type="submit"] {
     font-size: 17px;
 }
 
-.userA:hover {
+.userBox a:hover {
     background: #cf5e3b;
 }
 
 .profileBox {
-    padding: 2rem;
+    margin: 1.5rem 2rem 2rem 1rem;  
 }
 
 .profile-out {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 8px 0 7px 0;  
+    max-width: 100%;
+    text-align: center;    
 }
 
-.profile-in {
-    width: 80%;
-    margin: 0 auto;
-    background: #767777;
-    color: white;
-    padding:  8px 0 7px 0;
+.profile-in {  
+    color: black;
     border-radius: 1em;
 }
   
 .profile {
-    width: 90%;
-    margin: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.user-photo {
-    width: 100px; 
+.user-photo { 
     border-radius: 50%;
-    border: rgba(255, 255, 255, 0.434) 2px solid;
+    border: rgba(255, 255, 255, 0.434) 1px solid;
     margin: auto;
-}
-
-.user-photo img {
-    border-radius: 50%;
-    border: 3px solid #767777;
+    align-items: center;
 }
   
-p{
+.eachUser p{
     font-size: 12px;
+    text-align: left;
 }
+
+.eachUser {
+    border: solid 1px #c7c6c6a3;
+    border-radius: 0.5em;
+    background-color: #eeead9;
+    margin: 1rem;
+    padding: 0.8rem;
+    width: 200px;
+    letter-spacing: -0.6px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.eachUser span {
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: left;
+    padding-top: 2rem;
+}
+
 
 
 
@@ -493,7 +503,7 @@ p{
     text-align: center;
 }
 
-.totalAll {
+.total {
     display: flex;
     margin: 1rem 1.7rem 0 0;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -501,7 +511,7 @@ p{
     font-weight: bolder;
 }
 
-.totalAll strong {
+.total strong {
     padding-left: 1rem;
     color: red;
 }
