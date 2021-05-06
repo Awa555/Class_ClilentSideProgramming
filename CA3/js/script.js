@@ -61,6 +61,7 @@ $(document).ready(function () {
                     <p>${'Gender: ' + user.gender + ' / Age: ' + user.dob.age}</p>
                     <p>${'Phone: ' + user.phone + ' / ' + user.cell}</p>
                     <p>${'Email: ' + user.email}</p>
+                    <p>${'Country: ' + user.location.country}</p>
                     <p>${'PostCode: ' + user.location.postcode}</p>
                     <p>${'Address: ' + user.location.street.number + ' ' + user.location.street.name + ' , ' + user.location.city + ' . ' + user.location.state}</p>
                     
