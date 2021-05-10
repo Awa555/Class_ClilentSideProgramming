@@ -84,7 +84,8 @@
                 <li><a href="#2">Main</a></li>
                 <li><a href="#3">Dessert</a></li>
                 <li><a href="#4">Drinks</a></li>
-                <li class="cart"><a href="#5">Overall Bill</a></li>
+                <li><a href="#5" data-target="#cart">Overall Bill (<span class="total-count"></span>)</a></li>
+                <li><a href="#5" class="clear-cart">ClearAll</a></li>
             </ul>
 
             <!-- Menu Content -->
@@ -102,7 +103,7 @@
                                 <p class="p1">Spicy mixed olives co-starring mushrooms, garlic and red pepper.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0">ADD</a>
+                                    <a class="add-cart" data-name="Olives" data-price="4.95" href="##">ADD</a>
                                 </div>
                             </li>
 
@@ -115,7 +116,7 @@
                                 <p class="p1">With warm pitta triangles. Great to share.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" >ADD</a>
+                                    <a class="add-cart" data-name="Drizzle" data-price="4.95" href="##" >ADD</a>
                                 </div>
                             </li>
 
@@ -128,7 +129,7 @@
                                     for sharing! </p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##">ADD</a>
+                                    <a class="add-cart" data-name="PERinaise" data-price="4.95" href="##">ADD</a>
                                 </div>
                             </li>
                         </ul>
@@ -146,7 +147,7 @@
                                 <p class="p1">Served with plant-based Garlic PERinaise, lettuce and chilli jam.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="8.95">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Wrap" data-price="8.95">ADD</a>
                                 </div>
                             </li>
 
@@ -159,7 +160,7 @@
                                     PERi-PERi and served in your choice of spice.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="11.25">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Butterfly" data-price="11.25">ADD</a>
                                 </div>
                             </li>
 
@@ -172,7 +173,7 @@
                                     spice. Served in a Portuguese Roll with lettuce, mayo and tomato.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="13.40">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Burger" data-price="13.40">ADD</a>
                                 </div>
                             </li>
                         </ul>
@@ -189,7 +190,7 @@
                                 <p class="p1">Rich and creamy caramel cheesecake on a crumbly biscuit base.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="6.20">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Cheesecake" data-price="6.20">ADD</a>
                                 </div>
                             </li>
 
@@ -201,7 +202,7 @@
                                 <p class="p1">Rich and indulgent chocolate between moist chocolate sponge drenched in rich chocolate.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="6.20">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Choco" data-price="6.20">ADD</a>
                                 </div>
                             </li>
 
@@ -213,7 +214,7 @@
                                 <p class="p1">Rich and fluffy with walnuts, raisins and pineapple, topped with cream cheese icing.</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="6.20">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Carrot" data-price="6.20">ADD</a>
                                 </div>
                             </li>
                         </ul>
@@ -229,7 +230,7 @@
                                 <p class="p1Price">€2.20</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="2.20">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Coca" data-price="2.20">ADD</a>
                                 </div>
                             </li>
 
@@ -240,7 +241,7 @@
                                 <p class="p1Price">€4.00</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="4.00">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Karma" data-price="4.00">ADD</a>
                                 </div>
                             </li>
 
@@ -251,7 +252,7 @@
                                 <p class="p1Price">€2.10</p>
 
                                 <div class="counter">
-                                    <a class="add-cart" id="btn" href="##" value="0" data-price="2.10">ADD</a>
+                                    <a class="add-cart" href="##" data-name="Kids" data-price="2.10">ADD</a>
                                 </div>
                             </li>
                         </ul>
@@ -266,12 +267,10 @@
                                 <p class="product-another">Quantity</p>
                                 <p class="product-another">Total</p>
                             </div>
-                            <div class="bill"></div>
-                            <div></div>
+                            <table class="show-cart"></table>
+                            <div class="totalPrice">Total Price: €<span class="total-cart"></span></div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

@@ -10,6 +10,7 @@ function filterMenu(menu) {
     });
 }
 
+
 // function calcVegetarian () {
 //     if
 // }
@@ -31,7 +32,7 @@ filterMenu([
 
     {
         name: "13",
-        isVegetarian: false,
+        isVegetarian: true,
         price: 2.00
     },
-])
+]);

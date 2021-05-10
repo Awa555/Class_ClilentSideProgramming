@@ -1,160 +1,194 @@
+// ***** Shopping Cart API ***** //
 
-var product = {
-  "01": {
-    name = "Spicy Mixed Olives",
-    counter = 0,
-    price = 4.95
-  },
+// Private methods and propeties //
 
-  "02": {
-    name = "Houmous with PERi-PERi Drizzle",
-    counter = 0,
-    price = 4.95
-  },
+var shoppingCart = (function() {
+    
+  cart = [];
+  
+  // Constructor
+  function Item(name, price, count) {
+    this.name = name;
+    this.price = price;
+    this.count = count;
+  }
+  
+  // Save cart
+  function saveCart() {
+    sessionStorage.setItem('shoppingCart', JSON.stringify(cart));
+  }
+  
+    // Load cart
+  function loadCart() {
+    cart = JSON.parse(sessionStorage.getItem('shoppingCart'));
+  }
+  if (sessionStorage.getItem("shoppingCart") != null) {
+    loadCart();
+  }
+  
 
-  "03": {
-    name = "Sweet Potato Wedges with Garlic PERinaise",
-    counter = 0,
-    price = 4.95
-  },
+  /// ***** Public methods and propeties ***** //
+  var obj = {};
+  
+  // Add to cart
+  obj.addItemToCart = function(name, price, count) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart[item].count ++;
+        saveCart();
+        return;
+      }
+    }
+    var item = new Item(name, price, count);
+    cart.push(item);
+    saveCart();
+  }
 
-  "04": {
-    name = "The Great Imitator Wrap",
-    ounter = 0,
-    price = 8.95
-  },
+  // Set count from item
+  obj.setCountForItem = function(name, count) {
+    for(var i in cart) {
+      if (cart[i].name === name) {
+        cart[i].count = count;
+        break;
+      }
+    }
+  };
 
-  "05": {
-    name = "Chicken Butterfly",
-    counter = 0,
-    price = 11.25
-  },
+  // Remove item from cart
+  obj.removeItemFromCart = function(name) {
+      for(var item in cart) {
+        if(cart[item].name === name) {
+          cart[item].count --;
+          if(cart[item].count === 0) {
+            cart.splice(item, 1);
+          }
+          break;
+        }
+    }
+    saveCart();
+  }
 
-  "06": {
-    name = "Double Chicken Burger",
-    counter = 0,
-    price = 13.40
-  },
+  // Remove all items from cart
+  obj.removeItemFromCartAll = function(name) {
+    for(var item in cart) {
+      if(cart[item].name === name) {
+        cart.splice(item, 1);
+        break;
+      }
+    }
+    saveCart();
+  }
 
-  "07": {
-    name = "Gooey Caramel Cheesecake",
-    counter = 0,
-    price = 6.20
-  },
+  // Clear cart
+  obj.clearCart = function() {
+    cart = [];
+    saveCart();
+  }
 
-  "08": {
-    name = "Choc-A-Lot Cake",
-    counter = 0,
-    price = 6.20
-  },
+  // Count cart 
+  obj.totalCount = function() {
+    var totalCount = 0;
+    for(var item in cart) {
+      totalCount += cart[item].count;
+    }
+    return totalCount;
+  }
 
-  "09": {
-    name = "Carrot Cake",
-    counter = 0,
-    price = 6.20
-  },
+  // Total cart
+  obj.totalCart = function() {
+    var totalCart = 0;
+    for(var item in cart) {
+      totalCart += cart[item].price * cart[item].count;
+    }
+    return Number(totalCart.toFixed(2));
+  }
 
-  "10": {
-    name = "Coca-Cola Classic 330ml",
-    counter = 0,
-    price = 2.20
-  },
+  // List cart
+  obj.listCart = function() {
+    var cartCopy = [];
+    for(i in cart) {
+      item = cart[i];
+      itemCopy = {};
+      for(p in item) {
+        itemCopy[p] = item[p];
 
-  "11": {
-    name = "Karma Drinks Gingerella 300ml",
-    counter = 0,
-    price = 4.00
-  },
+      }
+      itemCopy.total = Number(item.price * item.count).toFixed(2);
+      cartCopy.push(itemCopy)
+    }
+    return cartCopy;
+  }
+
+  return obj;
+})();
 
 
-  "12": {
-    name = "Kids Cawston Press Summer Berry 200ml",
-    counter = 0,
-    price = 2.10
-  },
+
+// Add item
+$('.add-cart').click(function(event) {
+  event.preventDefault();
+  var name = $(this).data('name');
+  var price = Number($(this).data('price'));
+  shoppingCart.addItemToCart(name, price, 1);
+  displayCart();
+});
+
+// Clear items
+$('.clear-cart').click(function() {
+  shoppingCart.clearCart();
+  displayCart();
+});
+
+
+function displayCart() {
+  var cartArray = shoppingCart.listCart();
+  var output = "";
+  for(var i in cartArray) {
+    output += "<tr class='productList'>"
+      + "<td class='productList-title'>" + cartArray[i].name + "</td>" 
+      + "<td class='price'>" + cartArray[i].price + "</td>"
+      + "<td class='quantity'><div><button class='minus-item' data-name=" + cartArray[i].name + ">-</button>"
+      + "<input type='number' class='item-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
+      + "<button class='plus-item' data-name=" + cartArray[i].name + ">+</button></div></td>"
+      + "<td><button class='delete-item cancel' data-name=" + cartArray[i].name + ">X</button></td>"
+      + " = " 
+      + "<td class='total'>" + '€'+ cartArray[i].total +"</td>" 
+      +  "</tr>";
+  }
+  $('.show-cart').html(output);
+  $('.total-cart').html(shoppingCart.totalCart());
+  $('.total-count').html(shoppingCart.totalCount());
 }
 
 
-
-var addBtn = document.getElementById("btn");
-// var addBtn2 = document.getElementById("btn2");
-// var addBtn3 = document.getElementById("btn3");
-
-
-
-var bill = document.getElementsByClassName("bill");
-var temp;
-var total = 0;
-
-
-
-var addBtn = document.querySelectorAll('[id^="btn"]');
-
-// for (let i = 0; i < addBtn.length; i++) {
-
-
-var product = JSON.parse(localStorage.getItem("product"));
-
-
-getItem(product);
-
-// function getProduct(product) {
-//    fetch(product)
-// //     .then((response) => (response.json()))
-//      .then(function (data) {
-//        console.log(data);
-
-//        data.forEach(item => {
-
-
-
-addBtn.on("click", function () {
-  //for (let i = 0; i <= addBtn.length; i++) {
-
-  counter += 1;
-  temp = `
-    <div class= "productList">
-      <div class= "productList-title">${product.name}</div> 
-      <div class= "productList-another">€${product.price}</div>
-      <div class= "productList-another">${product.counter}</div>
-      <div class= "productList-another">€${(product.counter * product.price).toFixed(2)}</div>
-    </div>
-
-    <div class= "total">
-    Total Price: <strong>€${total = total + (product.counter * product.price)}</strong>
-    </div>
-    `;
-  //}
-  bill[0].innerHTML = temp;
-
-
-
+// Delete item button 
+$('.show-cart').on("click", ".delete-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
 })
-//     });
-//    });   
-//  }
 
-var total_items = 12;
 
-function CalculateItemsValue() {
+// -1
+$('.show-cart').on("click", ".minus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+})
 
-  var total = 0;
+// +1
+$('.show-cart').on("click", ".plus-item", function(event) {
+  var name = $(this).data('name')
+  shoppingCart.addItemToCart(name);
+  displayCart();
+})
 
-  for (let i = 1; i <= total_items; i++) {
-    itemID = document.getElementById("btn" + i);
-    //itemID = document.getElementById("btn2" + i);
-    total = total + (product.counter * product.price);
-  }
-
-  document.getElementById('ItemsTotal').innerHTML = "€" + total;
-};
-
-document.querySelectorAll('[id^="btn"]').forEach(item => {
-  item.addEventListener(CalculateItemsValue);
-
-  console.log(total);
+// Item count input
+$('.show-cart').on("change", ".item-count", function(event) {
+   var name = $(this).data('name');
+   var count = Number($(this).val());
+  shoppingCart.setCountForItem(name, count);
+  displayCart();
 });
 
-console.log(temp);
-
-CalculateItemsValue();
+displayCart();
