@@ -87,11 +87,11 @@ function validateForm() {
 
     // Validate name
     if (name == "") {
-        printError("nameErr", "Please enter your name");
+        printError("nameErr", "<span style='color:red'> Please enter your name </span>");
     } else {
         var regex = /^[a-zA-Z\s]+$/;
         if (regex.test(name) === false) {
-            printError("nameErr", "Please enter a valid name");
+            printError("nameErr", "<span style='color:red'> Please enter a valid name </span>");
         } else {
             printError("nameErr", "");
             nameErr = false;
@@ -100,12 +100,12 @@ function validateForm() {
 
     // Validate email address
     if (email == "") {
-        printError("emailErr", "Please enter your email address");
+        printError("emailErr", "<span style='color:red'> Please enter your email address </span>");
     } else {
         // Regular expression for basic email validation
         var regex = /^\S+@\S+\.\S+$/;
         if (regex.test(email) === false) {
-            printError("emailErr", "Please enter a valid email address");
+            printError("emailErr", "<span style='color:red'> Please enter a valid email address </span>");
         } else {
             printError("emailErr", "");
             emailErr = false;
@@ -114,11 +114,11 @@ function validateForm() {
 
     // Validate mobile number
     if (mobile == "") {
-        printError("mobileErr", "Please enter your mobile number");
+        printError("mobileErr", "<span style='color:red'> Please enter your mobile number </span>");
     } else {
         var regex = /^[1-9]\d{9}$/;
         if (regex.test(mobile) === false) {
-            printError("mobileErr", "Please enter a valid 10 digit mobile number");
+            printError("mobileErr", "<span style='color:red'> Please enter a valid 10 digit mobile number </span>");
         } else {
             printError("mobileErr", "");
             mobileErr = false;
@@ -128,7 +128,7 @@ function validateForm() {
 
     // Validate gender
     if (gender == "") {
-        printError("genderErr", "Please select your gender");
+        printError("genderErr", "<span style='color:red'> Please select your gender </span></p>");
     } else {
         printError("genderErr", "");
         genderErr = false;
@@ -137,52 +137,80 @@ function validateForm() {
     // Prevent the form from being submitted if there are any errors
     if ((nameErr || emailErr || mobileErr || genderErr) == true) {
         return false;
-    } else {
+    }
+
+    else {
         // Creating a string from input data for preview
         var dataPreview = "You've entered the following details: \n" +
             "Name: " + name + "\n" +
             "Email: " + email + "\n" +
             "Mobile Number: " + mobile + "\n" +
             "Gender: " + gender + "\n";
+
         if (accuracyOrder.length) {
-            dataPreview += "accuracyOrder: " + accuracyOrder.join(", ");
+            dataPreview += "AccuracyOrder: " + accuracyOrder.join(",  ") + "\n";
         }
 
         if (starter.length) {
-            dataPreview += "starter: " + starter.join(", ");
+            dataPreview += "Starter: " + starter.join(", ") + "\n";
         }
 
         if (main.length) {
-            dataPreview += "main: " + main.join(", ");
+            dataPreview += "Main: " + main.join(", ") + "\n";
         }
 
         if (dessert.length) {
-            dataPreview += "dessert: " + dessert.join(", ");
+            dataPreview += "Dessert: " + dessert.join(", ") + "\n";
         }
 
         if (drinks.length) {
-            dataPreview += "drinks: " + drinks.join(", ");
+            dataPreview += "Drinks: " + drinks.join(", ") + "\n";
         }
 
-        if (drinks.length) {
-            dataPreview += "food: " + food.join(", ");
+        if (food.length) {
+            dataPreview += "Food: " + food.join(", ") + "\n";
         }
 
-        if (drinks.length) {
-            dataPreview += "portion: " + portion.join(", ");
+        if (portion.length) {
+            dataPreview += "Portion: " + portion.join(", ") + "\n";
         }
 
-        if (drinks.length) {
-            dataPreview += "server: " + server.join(", ");
+        if (server.length) {
+            dataPreview += "Server: " + server.join(", ") + "\n";
         }
 
-        if (drinks.length) {
-            dataPreview += "value: " + value.join(", ");
+        if (value.length) {
+            dataPreview += "Value: " + value.join(", ") + "\n";
         }
 
         // Display input data in a dialog box before submitting the form
-        //alert(dataPreview);
-        alert('Form Succesfully Submitted! Thank you for filling out this survey. Your opinion helps us server you better.');
+        alert(dataPreview + "\n");
+        alert('Form Succesfully Submitted!' + '\n' + 'Thank you for filling out this survey. Your opinion helps us server you better.');
 
     }
 };
+
+
+
+
+/* Go to top */
+$(document).ready(function () {
+
+    $("#back-to-top").hide();
+
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 400) {
+                $("#back-to-top").fadeIn(400);
+            }
+            else {
+                $("#back-to-top").fadeOut(400);
+            }
+        });
+
+        $("#back-to-top").click(function () {
+            $('body,html').animate({ scrollTop: 0 }, 500);
+            return false;
+        });
+    });
+});

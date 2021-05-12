@@ -9,6 +9,9 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/survey.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- My JavaScript -->
     <script src="js/survey.js"></script>
 </head>
@@ -52,81 +55,81 @@
             <div class="row">
                 <label>1. The accuracy of your order. <i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="accuracyOrder[]" value="satisfied"> Satisfied</label>
-                    <label><input type="checkbox" name="accuracyOrder[]" value="neither"> Neither Satisfied nor Dissatisfied</label>
-                    <label><input type="checkbox" name="accuracyOrder[]" value="dissatisfied"> Dissatisfied</label>
+                    <label><input type="checkbox" name="accuracyOrder[]" value="Satisfied"> Satisfied</label>
+                    <label><input type="checkbox" name="accuracyOrder[]" value="Neither"> Neither Satisfied nor Dissatisfied</label>
+                    <label><input type="checkbox" name="accuracyOrder[]" value="Dissatisfied"> Dissatisfied</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>2. Taste / flavor of the Starter. <i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="starter[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="starter[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="starter[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="starter[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="starter[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="starter[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>3. Taste / flavor of the Main. <i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="main[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="main[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="main[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="main[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="main[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="main[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>4. Taste / flavor of the Dessert. <i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="dessert[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="dessert[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="dessert[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="dessert[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="dessert[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="dessert[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>6. Taste / flavor of the Drinks. <i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="drinks[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="drinks[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="drinks[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="drinks[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="drinks[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="drinks[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>7. The appearance of the food.<i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="food[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="food[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="food[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="food[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="food[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="food[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>8. Portion size.<i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="portion[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="portion[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="portion[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="portion[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="portion[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="portion[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>9. Server's attitude.<i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="server[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="server[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="server[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="server[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="server[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="server[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
             <div class="row">
                 <label>10. Value of the meal.<i>(Optional)</i></label>
                 <div class="form-inline">
-                    <label><input type="checkbox" name="value[]" value="excellent"> Excellent</label>
-                    <label><input type="checkbox" name="value[]" value="good"> Good</label>
-                    <label><input type="checkbox" name="value[]" value="improvement"> Needs Improvement</label>
+                    <label><input type="checkbox" name="value[]" value="Excellent"> Excellent</label>
+                    <label><input type="checkbox" name="value[]" value="Good"> Good</label>
+                    <label><input type="checkbox" name="value[]" value="Improvement"> Needs Improvement</label>
                 </div>
             </div>
 
@@ -151,8 +154,8 @@
             <div class="row">
                 <label>Gender</label>
                 <div class="form-inline">
-                    <label><input type="radio" name="gender" value="male"> Male</label>
-                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="Male"> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
                 </div>
                 <div class="error" id="genderErr"></div>
             </div>
