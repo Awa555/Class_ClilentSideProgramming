@@ -6,10 +6,12 @@ var shoppingCart = (function () {
   cart = [];
 
   // Constructor
-  function Item(name, price, count) {
+  function Item(name, price, count, starters, main) {
     this.name = name;
     this.price = price;
     this.count = count;
+    this.starters = starters;
+    this.main = main;
   }
 
   // Save cart
@@ -43,15 +45,7 @@ var shoppingCart = (function () {
     saveCart();
   }
 
-  // Set count from item
-  obj.setCountForItem = function (name, count) {
-    for (var i in cart) {
-      if (cart[i].name === name) {
-        cart[i].count = count;
-        break;
-      }
-    }
-  };
+
 
   // Remove item from cart
   obj.removeItemFromCart = function (name) {
@@ -144,14 +138,14 @@ function displayCart() {
   var output = "";
   for (var i in cartArray) {
     output += "<tr class='productList'>"
-      + "<td class='productList-title'>" + cartArray[i].name + "</td>"
-      + "<td class='price'>" + cartArray[i].price.toFixed(2) + "</td>"
+      + "<td class='productList-title'>" + "・" + cartArray[i].name + "</td>"
+      + "<td class='price'>" + "€" + cartArray[i].price.toFixed(2) + "</td>"
       + "<td class='quantity'><div><button class='minus-item' data-name=" + cartArray[i].name + ">-</button>"
       + "<input type='number' class='item-count' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
       + "<button class='plus-item' data-name=" + cartArray[i].name + ">+</button></div></td>"
       + "<td><button class='delete-item cancel' data-name=" + cartArray[i].name + ">X</button></td>"
       + " = "
-      + "<td class='total'>" + '€' + cartArray[i].total + "</td>"
+      + "<td class='total'>" + "€" + cartArray[i].total + "</td>"
       + "</tr>";
   }
   $('.show-cart').html(output);

@@ -460,7 +460,7 @@ input:hover[type="submit"] {
 }
 
 .products-container table {
-    padding: 1rem;
+    padding: 0.5rem;
 }
 
 .product-header {
@@ -476,11 +476,11 @@ input:hover[type="submit"] {
 
 .product-title {
     padding-left: 1rem;
-    width: 55%;
+    width: 52%;
 }
 
 .product-another {
-    width: 14%;
+    width: 15%;
     text-align: center;
 }
 
@@ -536,18 +536,28 @@ input:hover[type="submit"] {
 }
 
 .totalPrice {
-    display: flex;
-    margin: 1rem 1.7rem 0 0;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    float: right;
     font-weight: bolder;
     font-size: 16px;
+    padding: 1rem 1.5rem 0 0;
+    float: right;
 }
 
 .totalPrice span {
     padding-left: 1rem;
     color: red;   
 }
+
+/* .billBox {
+    width: 250px;
+    float: right;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.billOthers {
+    font-size: 14px;
+    border-bottom: solid 1px lightgray;
+    padding: 0.5rem 0;
+} */
 
 .cancel {
     background-color: red;
